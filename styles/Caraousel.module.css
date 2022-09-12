@@ -1,0 +1,35 @@
+.main {
+    min-height: 100vh;
+    flex: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40%;
+}
+
+.button {
+    position: absolute;
+    width: 3%;
+    height: -10%;
+    border-radius: 50px;
+    font-size: xx-large;
+    z-index: 2;
+    border-color: rgb(255, 255, 255);
+}
+
+.prev {
+    left: 38%;
+}
+
+.next {
+    right: 36.5%;
+}
+
+.container{
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    margin-left: 2%;
+}
+
