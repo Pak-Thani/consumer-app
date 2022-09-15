@@ -1,6 +1,6 @@
-import styles from '../styles/Card.module.css'
+// import styles from '../styles/Card.module.css'
 
-function ProductCard({user}) {
+function ProductCard({product}) {
     return (
         // <div className={styles.card}>
         //     <img src={user.avatar} alt='Product Image' style={{width: '100%'}} />
@@ -11,12 +11,12 @@ function ProductCard({user}) {
         //     </div>
         // </div>
 
-        <div className="card" style={{width: "18rem"}}>
-            <img src={user.avatar} className="card-img-top" alt="Product Image" />
+        <div className="card" style={{width: "16rem", marginRight: "30px"}}>
+            <img src={product.imageId} className="card-img-top" alt="Product Image" />
             <div className="card-body">
-                <h5 className="card-title">{user.name}</h5>
-                <p className="card-text">{user.email} <span className ={styles.span}>/ 1 kg</span></p>
-                <a href="#" className="btn  btn-warning">Beli</a>
+                <h5 className="card-title">{product.displayName}</h5>
+                <p className="card-text" style={{minHeight: "50px"}}>Rp {product.pricePerQty}<span style={{color: "rgba(0, 0, 0, 0.6)"}}>/ {product.qty}</span></p>
+                <a href="#" className="btn" style={{backgroundColor: "#F7D100", width: "14rem", alignItems: "center"}}><b>Beli</b></a>
             </div>
         </div>
     )
