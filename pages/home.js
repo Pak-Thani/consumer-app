@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import ProductCards from '../components/productCards'
-// import styles from '../styles/Home.module.css'
 import customSection from  '../constant/customSection.json'
 import styled from 'styled-components'
 
@@ -22,7 +21,6 @@ const Style = styled.div`
     }
     .sectionBody {
         display: flex;
-        
         margin: 0px 4px;
         overflow: auto;
         scroll-behavior: smooth;
