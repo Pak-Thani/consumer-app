@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .Logo {
   text-align: center;
   display: block;
@@ -239,12 +240,42 @@
     background-color: aliceblue;
     border: 2px solid #ccc;
     width: 200px;
+=======
+.Logo{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    width: 140px;
+}
+
+.containerfluid{
+    
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+}
+
+.Iconsearch{
+    position: absolute;
+    padding-top: 0.8%;
+}
+
+.search{
+    background-color: aliceblue;
+    border:2px solid #ccc;
+    width : 200px;
+>>>>>>> b63db6535b54039cea4aaa87c0d7e824f807482b
     height: 30px;
     margin-top: 10px;
     border-radius: 5px;
     border-color: rgb(65, 61, 61);
     border-width: 0.5px;
     padding-left: 15%;
+<<<<<<< HEAD
     position: relative;
   }
 
@@ -299,3 +330,115 @@
     left: 37%;
   }
 }
+=======
+    float: left;
+}
+
+.burgernavbar{
+    width: 10%;
+    height: 10%;
+    padding-left:3%;
+    padding-right: 12%;
+    background-color:#F7D100;
+    border-color: #F7D100;
+    border-radius: 5px;
+    display: inline-block;
+    /* justify-content: center;
+    align-items: center; */
+    cursor: pointer;
+    float: right;
+    margin-left: 10%;
+    margin-top: 4%;
+    
+}
+
+.burgernavbar span{
+    display: flex;
+    width: 14px;
+    height: 2px;
+    background: black;
+    border-radius: 4px;
+    transition: 0.5s;
+    margin: 5px auto;
+    justify-content: left;
+}
+
+/*garis pertama 2 garis kedua 1*/
+
+.burgernavbar span:nth-child(1){
+    width: 18px;
+    transform: translateY(3px) translateX(2PX);
+}
+
+.burgernavbar span:nth-child(3){   
+    width: 15px;
+    transform: translateY(-3px) translateX(5PX);;
+}
+
+.burgernavbar span:nth-child(2){   
+    width: 13px;
+    transform: translateY(0px) translateX(7PX);;
+}
+
+.burgernavbar.active span:nth-child(1)
+{
+    -webkit-transform: translateY(10px) rotate(45deg);
+    transform: translateY(7px) rotate(40deg) translateX(1px);
+}
+
+.burgernavbar.active span:nth-child(3)
+{
+    opacity: 0;
+    
+}
+
+.burgernavbar.active span:nth-child(2)
+{
+    -webkit-transform: translateY(20px) rotate(40deg);
+    transform: translateY(2px) rotate(-40deg) translateX(1.5px);
+    width: 17px;
+}
+
+.navmenu
+{
+    position: absolute;
+    right: -100%;
+    flex-direction: column;
+    background-color: #F7D100;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow:
+    0 10px 27px rgba(0, 0, 0, 0.05);
+}
+
+.navitem{
+    text-align: center;
+
+}
+
+.navmenu.active {
+    right: 0;
+}
+
+.navlink 
+{
+
+}
+
+.navitem
+{
+    margin: 2.5rem 0;
+}
+
+.displaynyasisearchdanburger
+{
+    display: flex;
+}
+
+.caraouselslide{
+
+}
+
+>>>>>>> b63db6535b54039cea4aaa87c0d7e824f807482b
