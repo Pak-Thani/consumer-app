@@ -2,6 +2,8 @@ import Link from 'next/link'
 import ProductCards from '../components/productCards'
 import customSection from  '../constant/customSection.json'
 import styled from 'styled-components'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 
 const Style = styled.div`
 .section {
@@ -32,49 +34,48 @@ const Style = styled.div`
 `
 
 function Home({customSection}) {
+    const [data, setData] = useState(null)
+
+    useEffect ( ()=>{
+        axios.get( "http://localhost:3004/result" )
+        .then( (res) => {
+        setData([...res.data["data"]["customSection"]])
+        } )
+        .catch((error) => {
+        })
+    }, [])
+
     return (
     <Style>
         <div> 
             {
-                customSection.map(customSec => {
-                    return (
-                        <div key={customSec.title} className="section">
-                            <div className="sectionHead">
-                                <h3>{customSec.title}</h3>
-                                <Link href="/">
-                                    <a>View More</a>
-                                </Link>
-                            </div>
-                            <div className="sectionBody">
-                                {
-                                    customSec["products"].map(product => {
-                                        return (
-                                            <div key={customSec["products"].displayName}>
-                                                <ProductCards product={product} />
-                                            </div>
-                                        )
-                                    })
-                                }
-                            </div>
+                data !== null && data.map((res) => {
+                return (
+                    <div key={res.title} className="section">
+                        <div className="sectionHead">
+                            <h3>{res.title}</h3>
+                            <Link href="/">
+                                <a>View More</a>
+                            </Link>
                         </div>
-                    )
-                })
+                        <div className="sectionBody">
+                            {
+                                res["products"].map(product => {
+                                    return (
+                                        <div key={product.displayName}>
+                                            <ProductCards product={product} />
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
+                    </div>
+                )})
             }
             
         </div>
     </Style>
     )
 }
+
 export default Home
-
-export async function getStaticProps() {
-    const response = await fetch('http://localhost:3004/result')
-    const data = await response.json()
-    console.log(data["data"]["customSection"])
-
-    return {
-        props: {
-            customSection: data["data"]["customSection"],
-        },
-    }
-}
