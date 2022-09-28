@@ -72,10 +72,10 @@ function Home({customSection}) {
                     </div>
                 )})
             }
-            
         </div>
     </Style>
     )
 }
 
 export default Home
+
