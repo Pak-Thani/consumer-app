@@ -37,9 +37,12 @@ function Home({customSection}) {
     const [data, setData] = useState(null)
 
     useEffect ( ()=>{
-        axios.get( "http://localhost:3004/result" )
+        axios.get("http://localhost:3004/result", {
+            // header: {"Access-Control-Allow-Origin": "*"}
+        })
         .then( (res) => {
-        setData([...res.data["data"]["customSection"]])
+        console.log(res.data)
+        setData([...res.data["data"]["customSections"]])
         } )
         .catch((error) => {
         })
@@ -51,7 +54,7 @@ function Home({customSection}) {
             {
                 data !== null && data.map((res) => {
                 return (
-                    <div key={res.title} className="section">
+                    <div key={res.id} className="section">
                         <div className="sectionHead">
                             <h3>{res.title}</h3>
                             <Link href="/">
@@ -62,7 +65,7 @@ function Home({customSection}) {
                             {
                                 res["products"].map(product => {
                                     return (
-                                        <div key={product.displayName}>
+                                        <div key={product.id}>
                                             <ProductCards product={product} />
                                         </div>
                                     )

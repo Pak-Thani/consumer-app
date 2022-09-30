@@ -1,88 +1,79 @@
 {
     "result": {
-    "data": {
-      "customSection": [
-        {
-          "title": "Protein Sehat",
-          "slugs": "protein-sehat-124",
-          "products": [
-              {
-                "displayName": "Ayam",
-                "slug": "ayam-135",
-                "pricePerQty": 45000,
-                "qty": "1kg",
-                "imageId": "https://picsum.photos/200",
-                "isStockAvailable": true
-              },
-              {
-                "displayName": "Ikan",
-                "slug": "Ikan-135",
-                "pricePerQty": 35000,
-                "qty": "1kg",
-                "imageId": "https://picsum.photos/200",
-                "isStockAvailable": true
-              },
-              {
-                "displayName": "Kalkun",
-                "slug": "kalkun-2341",
-                "pricePerQty": 65000,
-                "qty": "1kg",
-                "imageId": "https://picsum.photos/200",
-                "isStockAvailable": true
-              },
-              {
-                "displayName": "Ayam Petarung",
-                "slug": "ayam-petarung-1235",
-                "pricePerQty": 51000,
-                "qty": "1 ekor",
-                "imageId": "https://picsum.photos/200",
-                "isStockAvailable": false
-              }
-            ]
-        },
-        {
-          "title": "Sarapan Harianmu",
-          "slugs": "sarapan-harianmu-124",
-          "products": [
-              {
-                "displayName": "KoKo Crunch",
-                "slug": "koko-crunch-135",
-                "pricePerQty": 34000,
-                "qty": "1 pc",
-                "imageId": "https://picsum.photos/200",
-                "isStockAvailable": true
-              },
-              {
-                "displayName": "Susu Greenfield Full Cream",
-                "slug": "susu-green-field-full-cream-1254",
-                "pricePerQty": 18000,
-                "qty": "1 pc",
-                "imageId": "https://picsum.photos/200",
-                "isStockAvailable": true
-              },
-              {
-                "displayName": "Susu Greenfield UHT",
-                "slug": "susu-greenfield-uht-135",
-                "pricePerQty": 19000,
-                "qty": "1 pc",
-                "imageId": "https://picsum.photos/200",
-                "isStockAvailable": true
-              },
-              {
-                "displayName": "Honney Comb Sereal",
-                "slug": "honney-comb-sereal-135",
-                "pricePerQty": 32000,
-                "qty": "1 pc",
-                "imageId": "https://picsum.photos/200",
-                "isStockAvailable": true
-              }
-            ]
+        "success": true,
+        "error": "",
+        "data": {
+            "customSections": [
+                {
+                    "id": 1,
+                    "title": "Sayuran",
+                    "slug": "sayuran-segar",
+                    "products": [
+                        {
+                            "id": 1,
+                            "name": "Ikan Bandeng",
+                            "description": "Ikan Bandeng Aceh Asli dari markas",
+                            "image": "https://sgp1.digitaloceanspaces.com/pakthani/media/banana-bunch-isolated_88281-1027.jpg?AWSAccessKeyId=DO00NJYH7VY6JC7NJALF&Signature=fgBVVzce6T%2B1sMV%2F8Sq2roAhReo%3D&Expires=1664547655",
+                            "slug": "sdadadas",
+                            "qty": "1 kg",
+                            "pricePerQty": 25000,
+                            "stockAvailable": 5,
+                            "isStockAvailable": true
+                        },
+                        {
+                            "id": 2,
+                            "name": "Sawi",
+                            "description": "turpis nunc eget lorem dolor",
+                            "image": "https://sgp1.digitaloceanspaces.com/pakthani/media/photo1664383746.jpeg?AWSAccessKeyId=DO00NJYH7VY6JC7NJALF&Signature=yliK3zhvnAhXRN0litYWw8v%2Bzpw%3D&Expires=1664547655",
+                            "slug": "sawi",
+                            "qty": "1 Ikat",
+                            "pricePerQty": 8000,
+                            "stockAvailable": 100,
+                            "isStockAvailable": true
+                        },
+                        {
+                            "id": 3,
+                            "name": "Selada",
+                            "description": "turpis nunc eget lorem dolor",
+                            "image": "https://sgp1.digitaloceanspaces.com/pakthani/media/photo1664383864.jpeg?AWSAccessKeyId=DO00NJYH7VY6JC7NJALF&Signature=Qmh3XhqVcAl5F5%2BInr6k%2B1knNlg%3D&Expires=1664547655",
+                            "slug": "selada",
+                            "qty": "100gr",
+                            "pricePerQty": 5000,
+                            "stockAvailable": 50,
+                            "isStockAvailable": true
+                        },
+                        {
+                            "id": 4,
+                            "name": "Lobak",
+                            "description": "turpis nunc eget lorem dolor",
+                            "image": "https://sgp1.digitaloceanspaces.com/pakthani/media/photo1664383899.jpeg?AWSAccessKeyId=DO00NJYH7VY6JC7NJALF&Signature=FaU3EoyrNVtvlY5XqNZSIS4gRDA%3D&Expires=1664547655",
+                            "slug": "lobak",
+                            "qty": "200gr",
+                            "pricePerQty": 10000,
+                            "stockAvailable": 40,
+                            "isStockAvailable": true
+                        },
+                        {
+                            "id": 5,
+                            "name": "kangkung",
+                            "description": "kangkung segar",
+                            "image": "https://sgp1.digitaloceanspaces.com/pakthani/media/product/kangkung.png?AWSAccessKeyId=DO00NJYH7VY6JC7NJALF&Signature=d5GsOjaKE3g9jfMeI4uKvADB5EM%3D&Expires=1664547655",
+                            "slug": "kangkung",
+                            "qty": "250 gram",
+                            "pricePerQty": 4000,
+                            "stockAvailable": 0,
+                            "isStockAvailable": false
+                        }
+                    ],
+                    "is_active": true
+                }
+            ],
+            "links": {
+                "next": null,
+                "previous": null
+            },
+            "total_element": 1,
+            "total_page": 1
         }
-      ],
-      "total_element": 2,
-      "total_page": 1
-    },
-    "error": null,
-    "success": true
-  }
+    }
 }
