@@ -3,6 +3,8 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import fotoproduct from "../public/bayam.png";
 import checkmark from "../public/Checkmark.png";
+import axios from "axios";
+import styled from 'styled-components';
 
 export default function ProductDetail() {
   const [data, setData] = useState(null);
@@ -55,13 +57,14 @@ export default function ProductDetail() {
   };
 
   useEffect(() => {
-    setLoading(true);
-    fetch("https://api.npoint.io/9f8b70d82a8cf71a2295")
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-        setLoading(false);
-      });
+    axios.get("https://api.npoint.io/9f8b70d82a8cf71a2295")
+    .then((res) => {
+      console.log(res.data)
+      setData(res.data)
+      setLoading(false)
+    })
+    .catch((error) => {  
+    })
     const interval = setInterval(() => setIsOpen(false), 5000)
     return () => clearInterval(interval)
   }, []);
@@ -88,9 +91,9 @@ export default function ProductDetail() {
         <hr className={styles.line}></hr>
         <p className={styles.detailproduk}>Detail Produk</p>
         <p className={styles.keterangan}>{data.products.detailProduct}</p>
-        <p className={styles.varian}>Pilih Varian</p>
+        <p className={styles.varian}> Varian</p>
         <div className={styles.button}>
-          <button
+          {/* <button
             className={
               isClicked1 === false
                 ? styles.button1
@@ -111,7 +114,7 @@ export default function ProductDetail() {
           >
             {" "}
             500 gr{" "}
-          </button>
+          </button> */}
           <button
             className={
               isClicked3 === false

@@ -73,8 +73,14 @@
 
 .button{
     margin-left: -0.5%;
+<<<<<<< HEAD
 }
 .button1{
+=======
+    margin-top: -0.5%;
+}
+/* .button1{
+>>>>>>> 1414bba (Detail-Item Updated)
     border-radius: 10px;
     width: 70px;
     padding: 6px;
@@ -92,7 +98,11 @@
     background-color: white;
     border-width: 1px;
     opacity: 0.5;
+<<<<<<< HEAD
 }
+=======
+} */
+>>>>>>> 1414bba (Detail-Item Updated)
 
 .button3{
     border-radius: 10px;
@@ -160,7 +170,10 @@
     color: #333;
     z-index:3;
     opacity: 0;
+<<<<<<< HEAD
     transition-duration: 1s;
+=======
+>>>>>>> 1414bba (Detail-Item Updated)
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 5s;
@@ -171,10 +184,17 @@
 
 .blur.active{
     width: 21%;
+<<<<<<< HEAD
     height: 85%;
     z-index: 2;
     background: rgb(0, 0, 0);
     border-radius: 6px;
+=======
+    height: 78%;
+    z-index: 2;
+    background: rgb(0, 0, 0);
+    border-radius: 10px;
+>>>>>>> 1414bba (Detail-Item Updated)
     position: absolute;
     top: 50%;
     left:50%;
@@ -185,6 +205,10 @@
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 5s;
+<<<<<<< HEAD
+=======
+    margin-top: -1.5%;
+>>>>>>> 1414bba (Detail-Item Updated)
 }
 
 @-webkit-keyframes fadeIn {
