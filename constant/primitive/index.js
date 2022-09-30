@@ -1,13 +1,5 @@
 import styled from 'styled-components';
 
-const color = {
-    primary: '#F7D100',
-    secondary: '#4CB654',
-    background: '#FFFFFF',
-}
-
-
-
 const primitive = {
     h1: "6.857rem",
     h2: "4.286rem",
@@ -23,4 +15,28 @@ const primitive = {
     extratiny: "0.6rem"
 };
 
-export {primitive, color};
+
+const color = {
+        primary: '#F7D100',
+        secondary: '#4CB654',
+        background: '#FFFFFF',
+    
+}
+
+const breakpoints = {
+    mobile: () => css`
+        @media (max-width: 400px) {
+            width: 100%;
+        }
+    `
+    
+}
+
+const textStyle = StyleSheet.create({
+    font: 'Nunito',
+    fontWeights: 'normal',
+    textAlign: 'auto'
+})
+
+export {primitive, color, breakpoints, textStyle};
+
