@@ -5,10 +5,7 @@ import { startClock } from '../actions'
 import Head from 'next/head'
 import React from 'react'
 import ProductDetail from '../components/ProductDetail'
-<<<<<<< HEAD
-=======
 import { textStyle } from '../constant/primitive'
->>>>>>> 1414bba (Detail-Item Updated)
 
 const Index = () => {
   const dispatch = useDispatch()
@@ -25,11 +22,7 @@ const Index = () => {
       <div>
         <Head>
           <title>
-<<<<<<< HEAD
-            Task1
-=======
             Detail Item
->>>>>>> 1414bba (Detail-Item Updated)
           </title>
           <link 
             rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
