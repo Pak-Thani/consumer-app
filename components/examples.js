@@ -1,5 +1,5 @@
-import Clock from './clock'
-import Counter from './counter'
+import Clock from "./clock";
+import Counter from "./counter";
 
 const Examples = () => {
   return (
@@ -7,7 +7,7 @@ const Examples = () => {
       <Clock />
       <Counter />
     </div>
-  )
-}
+  );
+};
 
-export default Examples
+export default Examples;
