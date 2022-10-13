@@ -1,43 +1,43 @@
-import { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
-import Link from 'next/link'
-import { startClock } from '../actions'
-import Head from 'next/head'
-import Nav from '../components/Nav'
-import React from 'react'
-import Carousel from '../components/Carousel'
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import Link from "next/link";
+import { startClock } from "../actions";
+import Head from "next/head";
+import Nav from "../components/Nav";
+import Caraousel from "../components/Carousel";
 
 const Index = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(startClock())
-  }, [dispatch])
+    dispatch(startClock());
+  }, [dispatch]);
 
   return (
     <>
-      {/* <Examples />
+      <Link href="/home">
+        <a>Click to see Home</a>
+      </Link>
+      <br></br>
       <Link href="/show-redux-state">
         <a>Click to see current Redux State</a>
-      </Link> */}
+      </Link>
       <div>
         <Head>
-          <title>
-            Task1
-          </title>
-          <link 
-            rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-          </link>
+          <title>Task1</title>
+          <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+          ></link>
         </Head>
         <Link href="Navbar">
-            <Nav>Nav</Nav>
+          <Nav>Navbar</Nav>
         </Link>
         <Link href="Navbar">
-            <Carousel>Carousel</Carousel>
+          <Caraousel>Carousel</Caraousel>
         </Link>
-
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;
