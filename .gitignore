@@ -8,9 +8,6 @@
 # testing
 /coverage
 
-# package
-.package.json
-
 # next.js
 /.next/
 /out/
