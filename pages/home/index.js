@@ -1,50 +1,71 @@
-// import Link from 'next/link'
-// import ProductCards from '../../components/productCards'
-// import customSection from  '../../constant/customSection.json'
-import styles from './index.module.css'
+import Link from "next/link";
+import ProductCards from "../../components/productCards";
+import styled from "styled-components";
+import { getAllCustomSection } from "../../api";
 
-function Home({customSection}) {
-    return (
-    <div className={styles.section}> 
-        JGSUFGAOIFGASOFGAOSIUFA
-        {/* {
-            customSection.map(customSec => {
-                return (
-                    <div key={customSec.title} className={styles.section}>
-                        <div className={styles.sectionHead}>
-                            <h3>{customSec.title}</h3>
-                            <Link href="/">
-                                <a className={styles.a}>View More</a>
-                            </Link>
-                        </div>
-                        <div className={styles.sectionBody}>
-                            {
-                                customSec["products"].map(product => {
-                                    return (
-                                        <div key={customSec["products"].displayName}>
-                                            <ProductCards product={product} />
-                                        </div>
-                                    )
-                                })
-                            }
-                        </div>
-                    </div>
-                )
-            })
-        } */}
-    </div>
-    )
+const Style = styled.div`
+  .section {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    .sectionHead {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+      & a {
+        color: #4cb654;
+        text-decoration: none;
+      }
+    }
+    .sectionBody {
+      display: flex;
+      flex-direction: row;
+      margin: 0px 4px;
+      overflow: auto;
+      scroll-behavior: smooth;
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+`;
+
+function Home({ customSection }) {
+  console.log(customSection);
+  return (
+    <Style>
+      <div>
+        {customSection.map((customSec, key) => {
+          return (
+            <div key={key} className="section">
+              <div className="sectionHead">
+                <h3>{customSec.title}</h3>
+                <Link href="/">
+                  <a>View More</a>
+                </Link>
+              </div>
+              <div className="sectionBody">
+                {customSec.products.map((product) => {
+                  return <ProductCards product={product} />;
+                })}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </Style>
+  );
 }
-export default Home
+export default Home;
 
-// export async function getStaticProps() {
-//     const response = await fetch('http://localhost:3004/result')
-//     const data = await response.json()
-//     console.log(data["data"]["customSection"])
-
-//     return {
-//         props: {
-//             customSection: data["data"]["customSection"],
-//         },
-//     }
-// }
+export async function getStaticProps() {
+  const allCustomSectionData = await getAllCustomSection();
+  console.log(allCustomSectionData);
+  return {
+    props: {
+      customSection: allCustomSectionData.data.customSections,
+    },
+  };
+}
