@@ -17,10 +17,9 @@ const primitive = {
 };
 
 const color = {
-        primary: '#F7D100',
-        secondary: '#4CB654',
-        background: '#FFFFFF',
-    
+    primary: '#F7D100',
+    secondary: '#4CB654',
+    background: '#FFFFFF',
 }
 
 const breakpoints = {

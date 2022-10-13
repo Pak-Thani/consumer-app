@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import Link from 'next/link'
 import { startClock } from '../actions'
-import Examples from '../components/examples'
+import Home from './home'
 
 const Index = () => {
   const dispatch = useDispatch()
@@ -11,8 +11,11 @@ const Index = () => {
   }, [dispatch])
 
   return (
-    <>
-      <Examples />
+    <> 
+      <Link href="/home">
+        <a>Click to see Home</a>
+      </Link>
+      <br></br>
       <Link href="/show-redux-state">
         <a>Click to see current Redux State</a>
       </Link>
