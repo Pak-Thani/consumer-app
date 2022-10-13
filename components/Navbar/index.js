@@ -1,10 +1,10 @@
-import Logo from "../public/logo.png";
+import Logo from "../../public/logo.png";
 import Image from "next/image";
-import styles from "../styles/Nav.module.css";
+import styles from "./index.module.css";
 import Link from "next/link";
 import { useState } from "react";
 
-const Nav = () => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const openMenu = () => setIsOpen(!isOpen);
   return (
@@ -160,4 +160,4 @@ const Nav = () => {
     </div>
   );
 };
-export default Nav;
+export default Navbar;

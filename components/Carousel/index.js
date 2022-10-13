@@ -1,8 +1,8 @@
-import styles from "../styles/Caraousel.module.css";
+import styles from "./index.module.css";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-export default function Caraousel() {
+export default function Carousel() {
   const [index, setIndex] = useState(0);
   const array = ["/3.jpg", "/6.jpg", "/2.jpg", "/5.jpg", "/1.jpg"];
 

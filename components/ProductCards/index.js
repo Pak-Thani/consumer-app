@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { color } from "../constant/primitive";
+import { color } from "../../constant/primitive";
 
 const IMAGE_WIDTH = 154;
 const IMAGE_HEIGTH = 154;
@@ -27,7 +27,7 @@ const Style = styled.div`
   }
 `;
 
-function ProductCard({ product }) {
+function ProductCards({ product }) {
   return (
     <Style>
       <div className="card" key={product.displayName}>
@@ -47,4 +47,4 @@ function ProductCard({ product }) {
   );
 }
 
-export default ProductCard;
+export default ProductCards;

@@ -1,52 +1,52 @@
 .main {
-  margin-top: 5%;
-  flex: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 40%;
+margin-top: 5%;
+flex: 80%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding-bottom: 40%;
 }
 
 .button {
-  cursor: pointer;
-  position: absolute;
-  width: 3%;
-  height: -10%;
-  border-radius: 50px;
-  font-size: 240%;
-  z-index: 2;
-  color: white;
-  user-select: none;
-  text-decoration: none;
-  align-items: center;
-  transition: 0.6s ease;
-  z-index: 1;
+cursor: pointer;
+position: absolute;
+width: 3%;
+height: -10%;
+border-radius: 50px;
+font-size: 240%;
+z-index: 2;
+color: white;
+user-select: none;
+text-decoration: none;
+align-items: center;
+transition: 0.6s ease;
+z-index: 1;
 }
 
 .button:hover {
-  text-decoration: none;
-  color: white;
+text-decoration: none;
+color: white;
 }
 
 .prev {
-  left: 44.9%;
+left: 44.9%;
 }
 
 .next {
-  right: 40.6%;
+right: 40.6%;
 }
 
 .container {
-  width: 16.9%;
-  height: 16.9%;
-  position: absolute;
-  margin-left: 2%;
-  border-radius: 100%;
+width: 16.9%;
+height: 16.9%;
+position: absolute;
+margin-left: 2%;
+border-radius: 100%;
 }
 
 @media only screen and (max-width: 500px) {
-  .main {
+.main {
     margin-top: 20%;
     flex: 80%;
     display: flex;
@@ -54,9 +54,9 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 40%;
-  }
+}
 
-  .button {
+.button {
     cursor: pointer;
     position: absolute;
     width: 3%;
@@ -70,27 +70,27 @@
     align-items: center;
     transition: 0.6s ease;
     z-index: 1;
-  }
+}
 
-  .button:hover {
+.button:hover {
     text-decoration: none;
     color: white;
-  }
+}
 
-  .prev {
+.prev {
     left: 30.9%;
-  }
+}
 
-  .next {
+.next {
     right: 22.6%;
-  }
+}
 
-  .container {
+.container {
     width: 52%;
     height: 20%;
     position: absolute;
     margin-left: 8%;
     border-radius: 100%;
     text-align: center;
-  }
+}
 }
