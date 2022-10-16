@@ -23,9 +23,9 @@ const Index = () => {
       <Link href="Navbar">
         <Navbar>Navbar</Navbar>
       </Link>
-      <Link href="Navbar">
+      {/* <Link href="Navbar">
         <Carousel>Carousel</Carousel>
-      </Link>
+      </Link> */}
     </div>
   );
 };

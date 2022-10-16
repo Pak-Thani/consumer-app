@@ -30,105 +30,31 @@ const Navbar = () => {
               <Search />
             </div>
             <div
-              className={`${styles.burgerNav} ${isOpen ? styles.active : ""}`}
-              onClick={openMenu}
+              className={`${styles.burgerNavWrapper} ${
+                isOpen ? styles.active : ""
+              }`}
             >
-              <span></span>
-              <span></span>
-              <span></span>
+              <div className={styles.burgerNavClose} onClick={openMenu}>
+                <div
+                  className={`${styles.burgerNav} ${
+                    isOpen ? styles.active : ""
+                  }`}
+                >
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div className={styles.burgerNavLink}>Tutup</div>
+              </div>
+              <div className={styles.burgerNavLinkGroup}>
+                <div>Kategori</div>
+                <div>List Transaksi</div>
+                <div>Keranjang</div>
+                <div>Alamat Saya</div>
+                <div>Keluar</div>
+              </div>
             </div>
           </div>
-
-          <ul
-            className={
-              isOpen === false
-                ? styles.navmenu
-                : styles.navmenu + " " + styles.active
-            }
-          >
-            <li className={styles.navitem}>
-              <a
-                className={
-                  isOpen === false
-                    ? styles.navlink
-                    : styles.navlink + " " + styles.active
-                }
-                onClick={openMenu}
-              >
-                Tutup
-              </a>
-            </li>
-            <li className={styles.navitem}>
-              <Link href="/Kategori">
-                <a
-                  className={
-                    isOpen === false
-                      ? styles.navlink
-                      : styles.navlink + " " + styles.active
-                  }
-                  onClick={openMenu}
-                >
-                  Kategori
-                </a>
-              </Link>
-            </li>
-            <li className={styles.navitem}>
-              <Link href="/ListTransaksi">
-                <a
-                  className={
-                    isOpen === false
-                      ? styles.navlink
-                      : styles.navlink + " " + styles.active
-                  }
-                  onClick={openMenu}
-                >
-                  List Transaksi
-                </a>
-              </Link>
-            </li>
-            <li className={styles.navitem}>
-              <Link href="/Keranjang">
-                <a
-                  className={
-                    isOpen === false
-                      ? styles.navlink
-                      : styles.navlink + " " + styles.active
-                  }
-                  onClick={openMenu}
-                >
-                  Keranjang
-                </a>
-              </Link>
-            </li>
-            <li className={styles.navitem}>
-              <Link href="/AlamatSaya">
-                <a
-                  className={
-                    isOpen === false
-                      ? styles.navlink
-                      : styles.navlink + " " + styles.active
-                  }
-                  onClick={openMenu}
-                >
-                  Alamat Saya
-                </a>
-              </Link>
-            </li>
-            <li className={styles.navitem}>
-              <Link href="/Keluar">
-                <a
-                  className={
-                    isOpen === false
-                      ? styles.navlinkKeluar
-                      : styles.navlinkKeluar + " " + styles.active
-                  }
-                  onClick={openMenu}
-                >
-                  Keluar
-                </a>
-              </Link>
-            </li>
-          </ul>
         </div>
       </nav>
     </div>

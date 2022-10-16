@@ -9,8 +9,6 @@
         justify-content: center;
     }
     .main {
-        display: flex;
-        justify-content: center;
         width: 480px;
     }
 }

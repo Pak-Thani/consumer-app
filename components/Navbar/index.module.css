@@ -10,6 +10,7 @@
 }
 
 .containerNav {
+  position: relative;
   width: 100%;
   padding: 0 16px;
 }
@@ -28,12 +29,6 @@
   left: 12px;
 }
 
-.Iconsearch.active {
-  position: absolute;
-  padding-top: 0.7%;
-  left: 44.3%;
-}
-
 .search::placeholder{
   padding-left: 0.2px;
 }
@@ -45,58 +40,60 @@
 .search {
   background-color: aliceblue;
   border: 2px solid #ccc;
-  width: 80%;
+  width: 83%;
   height: 41px;
   font-size: 14px;
   border-radius: 5px;
   border-color: rgb(65, 61, 61);
   border-width: 0.5px;
   padding-left: 39px;
-  position: relative;
+  position: absolute;
+  transition: 0.5s;
+  top: 0;
+  left: 0;
 }
 
 .search.active {
-  background-color: aliceblue;
-  border: 2px solid #ccc;
-  width: 109px;
-  height: 30px;
-  margin-top: 10px;
+  width: 55%;
+}
+
+.burgerNavWrapper {
+  width: 12%;
+  height: 41px;
+  font-size: 14px;
+  overflow: hidden;
+  background-color: #f7d100;
+  border-color: #f7d100;
   border-radius: 5px;
-  border-color: rgb(65, 61, 61);
-  border-width: 0.5px;
-  padding-left: 27%;
-  right: 41%;
-  visibility: visible;
-  opacity: 1;
-  transform: translateZ(1px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.5s;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.burgerNavWrapper.active {
+  width: 40%;
+  height: 195px;
 }
 
 .burgerNav {
-  width: 15%;
-  height: 41px;
-  background-color: #f7d100;
-  border-color: #f7d100;
-  border-radius: 5px;
-  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-.burgerNav.active {
-  width: 20%;
-  padding-left: 3%;
-  padding-right: 12%;
-  background-color: #f7d100;
-  border-color: #f7d100;
-  border-radius: 5px;
+.burgerNavClose {
+  width: 100%;
+  padding: 9px 16px 5px 16px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
   cursor: pointer;
-  float: right;
-  margin-left: 10%;
-  margin-top: 10%;
-  z-index: 3;
-  position: relative;
-  left: 43%;
-  /*transition: all 0.3s ease ease-out 0s;
-  visibility: 0s linear 0.3s;*/
-
 }
 
 .burgerNav span {
@@ -106,46 +103,42 @@
   background: black;
   border-radius: 4px;
   transition: 0.5s;
-  margin: 5px auto;
+  margin: 2px 0px;
   justify-content: left;
 }
 
 .burgerNav span:nth-child(1) {
-  width: 18px;
-  transform: translateY(3px) translateX(2px);
-}
-
-.burgerNav span:nth-child(3) {
-  width: 15px;
-  transform: translateY(-3px) translateX(5px);
+  width: 20px;
 }
 
 .burgerNav span:nth-child(2) {
-  width: 13px;
-  transform: translateY(0px) translateX(7px);
+  width: 15px;
+}
+
+.burgerNav span:nth-child(3) {
+  width: 18px;
 }
 
 .burgerNav.active span:nth-child(1) {
-  -webkit-transform: translateY(10px) rotate(45deg);
-  transform: translateY(7px) rotate(45deg) translateX(1px);
-}
-
-.burgerNav.active span:nth-child(3) {
-  opacity: 0;
+  transform: rotate(-45deg) translateY(8.5px);
+  margin-right: 12px;
 }
 
 .burgerNav.active span:nth-child(2) {
-  -webkit-transform: translateY(20px) rotate(40deg);
-  transform: translateY(2px) rotate(-45deg) translateX(1.8px);
-  width: 17px;
+  opacity: 0;
 }
 
-.navmenu {
-  position: fixed;
-  right: -100%;
+.burgerNav.active span:nth-child(3) {
+  width: 20px;
+  transform: rotate(45deg) translateY(-8.5px);
+  margin-right: 12px;
+}
+
+.navMenu {
+  position: absolute;
+  right: 16px;
   flex-direction: column;
   background-color: #f7d100;
-  width: 7%;
   border-radius: 5px;
   text-align: center;
   transition: 0.3s;
@@ -155,50 +148,49 @@
   border: 1px solid black;
   
 }
+.burgerNavLink {
+  opacity: 0;
+  transition: 0.1s;
+}
 
-.navmenu.active {
-  left: 50.6%;
-  top: 17%;
-  visibility: visible;
+.burgerNav.active ~ .burgerNavLink {
   opacity: 1;
-  transform: translateY(2px);
+  transition: 0.3s 0.2s;
 }
 
-.navmenu.active:focus-visible {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(10px);
-  transition-delay: 0s;
-}
-
-.navitem {
-  text-align: left;
-  margin: 1rem;
-  margin-left: -5%;
-}
-
-.navlink {
-  text-decoration: none;
-  color: #000;
-}
-
-.navlink.active {
-  text-decoration: none;
-  color: #000;
-  cursor: pointer;
-}
-
-.navlinkKeluar {
-  text-decoration: none;
-  color: #ed3434;
-}
-
-.navlinkKeluar.active {
-  text-decoration: none;
-  color: #ed3434;
-}
-
-.displaynyasisearchdanburger {
+.burgerNavLinkGroup {
+  width: 100%;
   display: flex;
-  max-width: 1000px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 16px;
+  opacity: 0;
+  transition: 0.1s;
+}
+
+.burgerNavLinkGroup div {
+  padding: 5px 0;
+}
+
+.burgerNavWrapper.active .burgerNavLinkGroup {
+  opacity: 1;
+  transition: 0.3s 0.2s;
+}
+
+@media only screen and (max-width: 480px) {
+  .burgerNavClose {
+    padding-right: 25%;
+  }
+  .burgerNavWrapper.active .burgerNavClose {
+    padding-right: 10px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .burgerNavWrapper.active {
+    height: 178px;
+  } 
+  .burgerNavLinkGroup {
+    font-size: 12px;
+  }
 }
