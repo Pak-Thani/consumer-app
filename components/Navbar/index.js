@@ -1,4 +1,5 @@
-import Logo from "../../public/logo.png";
+import Logo from "../../public/images/logo.png";
+import Search from "../../public/images/search.svg";
 import Image from "next/image";
 import styles from "./index.module.css";
 import Link from "next/link";
@@ -8,61 +9,34 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const openMenu = () => setIsOpen(!isOpen);
   return (
-    <div className="top" padding="20%">
-      <div className="container" />
-      <div className={styles.Logo}>
-        <Image src={Logo} />
+    <div className="top">
+      <div className={styles.logoWrapper}>
+        <div className={styles.logo}>
+          <Image src={Logo} />
+        </div>
       </div>
-      <nav className="navbar">
-        <div className={styles.containerfluid}>
-          <div className={styles.displaynyasisearchdanburger}>
-            <form className="d-flex" role="search">
-              <input
-                className={
-                  isOpen === false
-                    ? styles.search
-                    : styles.search + " " + styles.active
-                }
-                placeholder="Pencarian"
-                type="search"
-                aria-label="Search"
-              />
-              <div
-                className={
-                  isOpen === false
-                    ? styles.Iconsearch
-                    : styles.Iconsearch + " " + styles.active
-                }
-              >
-                <svg
-                  width="15"
-                  height="20"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  className="mx-3"
-                  role="img"
-                  viewBox="0 0 24 24"
-                >
-                  <circle cx="11.5" cy="10.5" r="5.5" />
-                  <path d="M21 21l-5.2-5.2" />
-                </svg>
-              </div>
-            </form>
-            <a
-              className={
-                isOpen === false
-                  ? styles.burgernavbar
-                  : styles.burgernavbar + " " + styles.active
-              }
+      <nav>
+        <div className={styles.containerNav}>
+          <div className={styles.searchWithBurger}>
+            <input
+              className={`${styles.search} ${isOpen ? styles.active : ""}`}
+              placeholder="Pencarian"
+              type="search"
+              aria-label="Search"
+            />
+            <div
+              className={`${styles.Iconsearch} ${isOpen ? styles.active : ""}`}
+            >
+              <Search />
+            </div>
+            <div
+              className={`${styles.burgerNav} ${isOpen ? styles.active : ""}`}
               onClick={openMenu}
             >
               <span></span>
               <span></span>
               <span></span>
-            </a>
+            </div>
           </div>
 
           <ul
