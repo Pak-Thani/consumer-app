@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import fotoproduct from "../public/bayam.png";
 import checkmark from "../public/Checkmark.png";
 import axios from "axios";
-import styled from 'styled-components';
 
 export default function ProductDetail() {
   const [data, setData] = useState(null);

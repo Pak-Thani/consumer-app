@@ -1,28 +1,31 @@
-import ProductDetail from '../components/ProductDetail'
+import styles from "./index.module.css"
+import { Carousel, CustomSection } from "../components";
+import { getAllCustomSection } from "../api";
 
-import { textStyle } from '../constant/primitive'
-
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import Link from "next/link";
-import { startClock } from "../actions";
-import Head from "next/head";
-import {Navbar, Carousel} from "../components" 
-
-const Index = () => {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(startClock());
-  }, [dispatch]);
-
+const Index = ({customSections}) => {
+  console.log(customSections)
   return (
     <div>
-      <Link href="Navbar">
-        <Carousel>Carousel</Carousel>
-      </Link>
+      <Carousel/>
+      <div className={styles.customSectionWrapper}>
+        {customSections.map((customSection, key) => (
+          <CustomSection 
+            data={customSection} 
+            key={key}
+          />
+        ))}
+      </div>
     </div>
   );
 };
 
+export async function getStaticProps() {
+  const allCustomSectionData = await getAllCustomSection();
+  return {
+    props: {
+      customSections: allCustomSectionData.data.customSections,
+    },
+  };
+}
 
 export default Index;

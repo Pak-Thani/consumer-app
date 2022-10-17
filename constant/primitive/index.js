@@ -1,6 +1,3 @@
-import styled from "styled-components";
-
-
 const primitive = {
   h1: "6.857rem",
   h2: "4.286rem",
