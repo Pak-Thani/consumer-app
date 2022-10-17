@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 const primitive = {
   h1: "6.857rem",
   h2: "4.286rem",
@@ -14,6 +15,7 @@ const primitive = {
   tiny: "0.643rem",
   extratiny: "0.6rem",
 };
+
 
 const color = {
   primary: "#F7D100",
@@ -31,3 +33,4 @@ const breakpoints = {
 };
 
 export { primitive, color, breakpoints };
+

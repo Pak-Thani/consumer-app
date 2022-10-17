@@ -1,3 +1,7 @@
+import ProductDetail from '../components/ProductDetail'
+
+import { textStyle } from '../constant/primitive'
+
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import Link from "next/link";
@@ -19,5 +23,6 @@ const Index = () => {
     </div>
   );
 };
+
 
 export default Index;
