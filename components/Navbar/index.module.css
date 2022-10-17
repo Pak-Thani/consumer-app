@@ -72,11 +72,14 @@
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 10;
+  border: 1px solid transparent;
 }
 
 .burgerNavWrapper.active {
   width: 40%;
   height: 195px;
+  border: 1px solid black;
 }
 
 .burgerNav {
@@ -94,6 +97,7 @@
   align-items: center;
   font-weight: bold;
   cursor: pointer;
+  transition: .1s;
 }
 
 .burgerNav span {
@@ -179,7 +183,7 @@
 
 @media only screen and (max-width: 480px) {
   .burgerNavClose {
-    padding-right: 25%;
+    padding-right: 13px;
   }
   .burgerNavWrapper.active .burgerNavClose {
     padding-right: 10px;
@@ -187,6 +191,9 @@
 }
 
 @media only screen and (max-width: 360px) {
+  .burgerNavClose {
+    padding-right: 10px;
+  }
   .burgerNavWrapper.active {
     height: 178px;
   } 

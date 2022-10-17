@@ -13,19 +13,9 @@ const Index = () => {
 
   return (
     <div>
-      <Head>
-        <title>Task1</title>
-        <link
-          rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-        ></link>
-      </Head>
       <Link href="Navbar">
-        <Navbar>Navbar</Navbar>
-      </Link>
-      {/* <Link href="Navbar">
         <Carousel>Carousel</Carousel>
-      </Link> */}
+      </Link>
     </div>
   );
 };

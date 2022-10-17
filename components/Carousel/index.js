@@ -1,6 +1,7 @@
 import styles from "./index.module.css";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import ArrowBack from "../../public/images/arrow-back.svg";
 
 export default function Carousel() {
   const [index, setIndex] = useState(0);
@@ -26,22 +27,24 @@ export default function Carousel() {
 
   return (
     <div className={styles.main}>
-      <button
+      <div
         className={`${styles.prev} ${styles.button}`}
         onClick={() => setIndex((count) => count - 1)}
       >
-        &#8592;
-      </button>
+        <ArrowBack />
+      </div>
 
-      <button
+      <div
         className={`${styles.next} ${styles.button}`}
         onClick={() => setIndex((count) => count + 1)}
       >
-        &#8594;
-      </button>
+        <ArrowBack />
+      </div>
 
       <div className={styles.container}>
-        <Image src={array[index]} layout="fill" objectFit="contain" alt=" " />
+        <div className={styles.carouselImageWrapper}>
+          <Image src={array[index]} layout="fill" objectFit="cover" alt=" " />
+        </div>
       </div>
     </div>
   );
