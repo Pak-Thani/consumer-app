@@ -13,10 +13,16 @@
   justify-content: space-between;
 }
 
+.customSectionHead h3 {
+ font-weight: 800;
+ font-size: 24px;
+}
+
 .viewMoreLink {
   color: #4cb654;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
+	font-size: 16px;
 }
 
 .viewMoreLink:hover {
