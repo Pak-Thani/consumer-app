@@ -1,9 +1,20 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import styles from "./index.module.css";
 
 function ProductCards({ product }) {
+  const router = useRouter();
   return (
-    <div className={styles.card} key={product.name}>
+    <div
+      className={styles.card}
+      key={product.name}
+      onClick={() =>
+        router.push({
+          pathname: "/product",
+          query: { productSlug: product.slug },
+        })
+      }
+    >
       <div className={styles.cardImgTop}>
         <Image
           src={product.image}
