@@ -8,7 +8,7 @@ const CustomSection = ({ data }) => {
       <div className={styles.customSectionHead}>
         <h3>{data.title}</h3>
         <Link href="/">
-          <a className={styles.viewMoreLink}>View More</a>
+          <a className={styles.viewMoreLink}> More</a>
         </Link>
       </div>
       <div className={styles.customSectionBody}>

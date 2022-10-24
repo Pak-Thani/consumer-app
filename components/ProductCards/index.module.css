@@ -1,14 +1,14 @@
 .card {
-  width: 170px;
-  height: 300px;
+  width: 120px;
+  height: 250px;
   margin-right: 20px;
 	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
 	border-radius: 10px;
 }
 
 .cardImgTop {
-	width: 170px;
-	height: 170px;
+	width: 120px;
+	height: 120px;
 	position: relative
 }
 
@@ -17,15 +17,15 @@
 }
 
 .cardTitle {
-	font-size: 16px;
-}
-
-.cardText {
 	font-size: 14px;
 }
 
+.cardText {
+	font-size: 12px;
+}
+
 .cardText span {
-	font-size: 13px;
+	font-size: 10px;
 	color: rgba(0,0,0, 0.6);
 }
 
@@ -35,7 +35,7 @@
 
 .btn {
 	width: 100%;
-	padding: .6rem;
+	padding: .4rem;
 	background-color: #F7D100;
 	vertical-align: bottom;
 	font-weight: 700;

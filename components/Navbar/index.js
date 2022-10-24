@@ -47,7 +47,11 @@ const Navbar = () => {
                 <div className={styles.burgerNavLink}>Tutup</div>
               </div>
               <div className={styles.burgerNavLinkGroup}>
-                <div>Kategori</div>
+                <div>
+                  <Link href="/catalog">
+                    <a className={styles.viewMoreLink}> Kategori</a>
+                  </Link>
+                </div>
                 <div>List Transaksi</div>
                 <div>Keranjang</div>
                 <div>Alamat Saya</div>
