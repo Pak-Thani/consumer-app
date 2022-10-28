@@ -6,7 +6,8 @@
   padding: 28px 0px 20px 0px;
 }
 .logo {
-  width: 140px;
+  width: 250px;
+  z-index: -1;
 }
 
 .containerNav {
