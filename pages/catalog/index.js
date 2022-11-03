@@ -1,11 +1,11 @@
 import styles from "./index.module.css";
-import { Carousel, CategoryButton, CustomSection } from "../../components";
-import { getAllCategory, getAllCustomSection } from "../../api";
+import {  CategoryButton } from "../../components";
+import { getAllCategory } from "../../api";
 
 const Index = ({ categorySections }) => {
   // console.log(customSections);
   return (
-    <div className={styles.main}>
+    <div className={styles.container}>
       <h3>Category</h3>
       <div className={styles.catalogButtonContainer}>
         {/* <h1>Test for katalog page</h1> */}

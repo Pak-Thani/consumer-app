@@ -49,13 +49,10 @@ const Navbar = () => {
               <div className={styles.burgerNavLinkGroup}>
                 <div>
                   <Link href="/catalog">
-                    <a className={styles.viewMoreLink}> Kategori</a>
+                    Kategori
                   </Link>
                 </div>
-                <div>List Transaksi</div>
                 <div>Keranjang</div>
-                <div>Alamat Saya</div>
-                <div>Keluar</div>
               </div>
             </div>
           </div>

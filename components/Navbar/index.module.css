@@ -5,6 +5,7 @@
   align-items: center;
   padding: 28px 0px 20px 0px;
 }
+
 .logo {
   width: 140px;
 }
@@ -29,11 +30,11 @@
   left: 12px;
 }
 
-.search::placeholder{
+.search::placeholder {
   padding-left: 0.2px;
 }
 
-.search.active::placeholder{
+.search.active::placeholder {
   padding-left: 0px;
 }
 
@@ -78,7 +79,8 @@
 
 .burgerNavWrapper.active {
   width: 40%;
-  height: 195px;
+  padding-bottom: 1rem;
+  height: content;
   border: 1px solid black;
 }
 
@@ -150,14 +152,15 @@
   z-index: 2;
   list-style-type: none;
   border: 1px solid black;
-  
+
 }
+
 .burgerNavLink {
   opacity: 0;
   transition: 0.1s;
 }
 
-.burgerNav.active ~ .burgerNavLink {
+.burgerNav.active~.burgerNavLink {
   opacity: 1;
   transition: 0.3s 0.2s;
 }
@@ -176,6 +179,17 @@
   padding: 5px 0;
 }
 
+/* .burgerNavLinkGroup div:hover {
+  padding: 5px 0;
+  width: 100%;
+  background-color: red;
+} */
+
+.burgerNavLinkGroup div a {
+  text-decoration: none;
+  color: black;
+}
+
 .burgerNavWrapper.active .burgerNavLinkGroup {
   opacity: 1;
   transition: 0.3s 0.2s;
@@ -185,6 +199,7 @@
   .burgerNavClose {
     padding-right: 13px;
   }
+
   .burgerNavWrapper.active .burgerNavClose {
     padding-right: 10px;
   }
@@ -194,9 +209,11 @@
   .burgerNavClose {
     padding-right: 10px;
   }
+
   .burgerNavWrapper.active {
-    height: 178px;
-  } 
+    height: max-content;
+  }
+
   .burgerNavLinkGroup {
     font-size: 12px;
   }

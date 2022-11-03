@@ -1,7 +1,7 @@
 /* CATEGORY button */
-.catergoryWrapper{
+.catergoryWrapper {
   display: flex;
-  flex-direction: column ;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -13,30 +13,4 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding: 28px 0px 20px 0px; */
-}
-
-.button{
-  border-radius: 50%;
-  width: 87px;
-  height: 87px;
-  margin: 1rem;
-  padding: 1rem;
-  background: rgb(150,195,98);
-background: linear-gradient(145deg, rgba(150,195,98,1) 49%, rgba(40,94,44,1) 51%); 
-}
-.button_2{
-  border-radius: 50%;
-  width: 87px;
-  height: 87px;
-  margin: 1rem;
-  padding: 1rem;
-  background: rgb(150,1,4);
-background: linear-gradient(145deg, rgba(150,1,4,1) 49%, rgba(40,94,44,1) 51%); 
-}
-.logo{
-  /* align-items: center;
-  display: block; */
-  margin: 0 auto;
-  width: max-content;
 }

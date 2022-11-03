@@ -18,6 +18,7 @@ const Index = ({ customSections }) => {
 
 export async function getServerSideProps() {
   const allCustomSectionData = await getAllCustomSection();
+  console.log(allCustomSectionData);
   return {
     props: {
       customSections: allCustomSectionData.data.customSections,
