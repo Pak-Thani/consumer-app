@@ -1,4 +1,4 @@
-import Logo from "../../public/images/logo.png";
+import Logo from "../../public/images/newlogo.png";
 import Search from "../../public/images/search.svg";
 import Image from "next/image";
 import styles from "./index.module.css";

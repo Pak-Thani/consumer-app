@@ -6,6 +6,7 @@ const Index = ({customSections}) => {
   return (
     <div>
       <Carousel/>
+      <h1>TEST PUSH 1.1</h1>
       <div className={styles.customSectionWrapper}>
         {customSections.map((customSection, key) => (
           <CustomSection 
