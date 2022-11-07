@@ -7,26 +7,6 @@ export default function Carousel() {
   const [carouselImageListIndex, setCarouselImageListIndex] = useState(0);
   const carouselImageList = ["/3.jpg", "/6.jpg", "/2.jpg", "/5.jpg", "/1.jpg"];
 
-  // todo @angle: Fix this logic
-  // function loop(count) {
-  //   if (count == array.length) {
-  //     return (count = 0);
-  //   }
-  //   if (count < 0) {
-  //     return (count = array.length - 1);
-  //   }
-  //   return count;
-  // }
-
-  // todo @angle: Fix this logic
-  // useEffect(() => {
-  //   const interval = setInterval(
-  //     () => (setCarouselImageListIndex) => (count) => (loop) => count + 1,
-  //     2000
-  //   );
-  //   return () => clearInterval(interval);
-  // }, []);
-
   const handleOnClickPrevCarousel = () => {
     if (carouselImageListIndex === 0) {
       setCarouselImageListIndex(carouselImageList.length - 1);

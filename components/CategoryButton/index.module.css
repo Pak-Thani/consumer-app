@@ -1,6 +1,5 @@
 /* CATEGORY button */
 .skeleton {
-  /* opacity: .7; */
   border-radius: 50%;
   animation: skeleton-loading 1s linear infinite alternate;
 }

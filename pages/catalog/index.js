@@ -3,7 +3,6 @@ import {  CategoryButton } from "../../components";
 import { getAllCategory } from "../../api";
 
 const Index = ({ categorySections }) => {
-  // console.log(customSections);
   return (
     <div className={styles.container}>
       <div className={styles.headTitle}>
@@ -11,7 +10,6 @@ const Index = ({ categorySections }) => {
       <p>Category</p>
       </div>
       <div className={styles.catalogButtonContainer}>
-        {/* <h1>Test for katalog page</h1> */}
         {categorySections.map((categorySection, key) => (
           <CategoryButton data={categorySection} key={key} />
         ))}
@@ -26,7 +24,6 @@ export async function getStaticProps() {
   return {
     props: {
       categorySections: allCategorySectionData.data,
-      // console.log(categorySection)
     },
   };
 }

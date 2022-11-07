@@ -33,10 +33,6 @@
 }
 
 .customSectionBody {
-  /* display: flex;
-  width: 100%;
-  overflow-x: scroll;
-  padding: 10px 5px; */
   width: 100%;
   display: grid;
   grid-auto-columns: 31%;

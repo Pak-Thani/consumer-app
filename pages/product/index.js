@@ -17,11 +17,6 @@ export default function ProductDetail() {
     query: { productSlug },
   } = route;
 
-  // you can start to explore data fetchin in next
-  // instead we use client side data fetching
-  // you can try another method data fetching that suitable for your case
-  // i use this method to make me easier fetch data from client
-  // if we can fetch data from server, we can reduce loading time and user experience
   useEffect(async () => {
     if (productSlug) {
       const data = await getProductByProductSlug(productSlug);
@@ -29,19 +24,20 @@ export default function ProductDetail() {
     }
   }, [productSlug]);
 
-  // please change this loading screen immediately
-  // you can use temp data
-  // or maybe use screen loading or skeleton component to make it more pretty
-  // todo @angle: change this boring loading component 
-  if (!productData) return <h1>loading</h1>;
+  if (!productData) return(
+    <div className={styles.loaderContainer}>
+      <h1>Loading</h1>
+      <div className={styles.ldsDualRing}></div>
+    </div>
+    );
 
   return (
     <div className={styles.container}>
-      <div className={styles.imageProduct}>
+      <div className={`${styles.imageProduct} ${styles.skeleton}`}>
         <div className={styles.backButton} onClick={() => route.push("/")}>
           <ArrowBackBlack />
         </div>
-        <Image layout="fill" objectFit="cover" src={productData.data.image} />
+        <Image layout="fill" objectFit="cover" src={productData.data.image} className={styles.skeleton}/>
       </div>
       <div className={styles.productBody}>
         <h2 className={styles.displayName}>{productData.data.name}</h2>

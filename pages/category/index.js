@@ -12,7 +12,6 @@ const CatalogSlug = ()=>  {
   const [categoryData, setCategoryData] = useState(undefined);
 
 
-  // console.log(categorySlug)
 
   useEffect(async () => {
     if (categorySlug) {

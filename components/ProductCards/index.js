@@ -26,13 +26,13 @@ function ProductCards({ product }) {
           className={styles.skeleton}
         />
       </div>
-      <div className={`${styles.cardBottomSection} `}>
-        <h5 className={`${styles.cardTitle} `}>{product.name}</h5>
-        <p className={`${styles.cardText} `}>
+      <div className={styles.cardBottomSection}>
+        <h5 className={styles.cardTitle}>{product.name}</h5>
+        <p className={styles.cardText}>
           Rp {product.pricePerQty}
           <span> / {product.qty}</span>
         </p>
-        <div className={`${styles.btn}`}>Beli</div>
+        <div className={styles.btn}>Beli</div>
       </div>
     </div>
   );

@@ -14,7 +14,6 @@ const CategoryButton = ({ data }) => {
   return (
     <>
         <div
-      // className={styles.card}
       key={data.name}
       onClick={() =>
         router.push({
