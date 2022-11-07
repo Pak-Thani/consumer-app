@@ -1,4 +1,5 @@
 import Logo from "../../public/images/logo.png";
+import newLogo from "../../public/images/newlogo.png";
 import Search from "../../public/images/search.svg";
 import Image from "next/image";
 import styles from "./index.module.css";
@@ -12,7 +13,7 @@ const Navbar = () => {
     <div className="top">
       <div className={styles.logoWrapper}>
         <div className={styles.logo}>
-          <Image src={Logo} />
+          <Image src={newLogo} />
         </div>
       </div>
       <nav>
