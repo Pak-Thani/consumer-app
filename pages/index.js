@@ -3,7 +3,6 @@ import { Carousel, CustomSection } from "../components";
 import { getAllCustomSection } from "../api";
 
 const Index = ({ customSections }) => {
-  console.log(customSections);
   return (
     <div>
       <Carousel />
