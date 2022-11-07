@@ -1,9 +1,13 @@
 import Image from "next/image";
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 import { useRouter } from "next/router";
 import styles from "./index.module.css";
 
 function ProductCards({ product }) {
   const router = useRouter();
+
+
   return (
     <div
       className={styles.card}
@@ -21,15 +25,16 @@ function ProductCards({ product }) {
           layout="fill"
           objectFit="cover"
           alt="Product Image"
+          className={styles.skeleton}
         />
       </div>
-      <div className={styles.cardBottomSection}>
-        <h5 className={styles.cardTitle}>{product.name}</h5>
-        <p className={styles.cardText}>
+      <div className={`${styles.cardBottomSection} `}>
+        <h5 className={`${styles.cardTitle} `}>{product.name}</h5>
+        <p className={`${styles.cardText} `}>
           Rp {product.pricePerQty}
           <span> / {product.qty}</span>
         </p>
-        <div className={styles.btn}>Beli</div>
+        <div className={`${styles.btn}`}>Beli</div>
       </div>
     </div>
   );

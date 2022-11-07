@@ -53,7 +53,7 @@ export default function ProductDetail() {
         </div>
         <p className={styles.productDetailTitle}>Detail Produk</p>
         <p className={styles.productDetail}>{productData.data.description}</p>
-        <p className={styles.variant}>Pilih Varian</p>
+        <p className={styles.variant}>Varian</p>
         <div className={styles.variantSelection}>{productData.data.qty}</div>
       </div>
       <div className={styles.buyButtonWrapper}>
