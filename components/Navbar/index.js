@@ -1,5 +1,4 @@
-// import newLogo from "../../public/images/newlogo.png";
-import logo from "../../public/images/logo.png"
+import newLogo from "../../public/images/newlogo.png";
 import Search from "../../public/images/search.svg";
 import Image from "next/image";
 import styles from "./index.module.css";
@@ -9,12 +8,11 @@ import { useState } from "react";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const openMenu = () => setIsOpen(!isOpen);
-  // console.log(newLogo)
   return (
     <div className="top">
       <div className={styles.logoWrapper}>
         <div className={styles.logo}>
-          <Image src={logo} />
+          <Image src={newLogo} />
         </div>
       </div>
       <nav>
