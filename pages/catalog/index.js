@@ -6,7 +6,10 @@ const Index = ({ categorySections }) => {
   // console.log(customSections);
   return (
     <div className={styles.container}>
-      <h3>Category</h3>
+      <div className={styles.headTitle}>
+        
+      <p>Category</p>
+      </div>
       <div className={styles.catalogButtonContainer}>
         {/* <h1>Test for katalog page</h1> */}
         {categorySections.map((categorySection, key) => (

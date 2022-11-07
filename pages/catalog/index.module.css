@@ -13,7 +13,22 @@
 .catalogButtonContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  /* grid-gap: 10px; */
-  /* background-color: #2196F3; */
-  /* padding: 10px; */
+}
+
+.headTitle {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 25px;
+  margin-bottom: 1rem;
+}
+
+.headTitle p {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
 }

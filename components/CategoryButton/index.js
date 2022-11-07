@@ -27,14 +27,14 @@ const CategoryButton = ({ data }) => {
       <div className={styles.catergoryWrapper}>
         <div className={styles.button}>
           <div className={styles.logoWrapper}>
-            <div style={{width: '100px', height: '100px', position: 'relative'}}>
-        <Image src={data.image} layout="fill"
+            <div style={{width: '87px', height: '87px', position: 'relative'}}>
+        <Image src={data.image} className={styles.skeleton} layout="fill"
     alt='icon category'
     sizes='100vm' />
       </div>
           </div>
         </div>
-        <h4>{data.name}</h4>
+        <p className={styles.categoryName}>{data.name}</p>
       </div>
     </div>
     </>
