@@ -4,14 +4,17 @@ import Image from "next/image";
 import styles from "./index.module.css";
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/router";
+
 
 const Navbar = () => {
+  const route = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const openMenu = () => setIsOpen(!isOpen);
   return (
     <div className="top">
       <div className={styles.logoWrapper}>
-        <div className={styles.logo}>
+        <div className={styles.logo} onClick={() => route.push("/")}>
           <Image src={newLogo} />
         </div>
       </div>
