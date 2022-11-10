@@ -22,7 +22,6 @@ function ProductCards({ product }) {
           src={product.image}
           layout="fill"
           objectFit="cover"
-          alt="Product Image"
           className={styles.skeleton}
         />
       </div>

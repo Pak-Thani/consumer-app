@@ -28,7 +28,6 @@ const CategoryButton = ({ data }) => {
           <div className={styles.logoWrapper}>
             <div style={{width: '87px', height: '87px', position: 'relative'}}>
         <Image src={data.image} className={styles.skeleton} layout="fill"
-    alt='icon category'
     sizes='100vm' />
       </div>
           </div>
