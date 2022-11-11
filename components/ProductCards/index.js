@@ -4,6 +4,8 @@ import styles from "./index.module.css";
 
 function ProductCards({ product }) {
   const router = useRouter();
+
+
   return (
     <div
       className={styles.card}
@@ -20,7 +22,7 @@ function ProductCards({ product }) {
           src={product.image}
           layout="fill"
           objectFit="cover"
-          alt="Product Image"
+          className={styles.skeleton}
         />
       </div>
       <div className={styles.cardBottomSection}>

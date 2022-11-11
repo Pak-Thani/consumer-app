@@ -1,18 +1,21 @@
-import Logo from "../../public/images/logo.png";
+import newLogo from "../../public/images/newlogo.png";
 import Search from "../../public/images/search.svg";
 import Image from "next/image";
 import styles from "./index.module.css";
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/router";
+
 
 const Navbar = () => {
+  const route = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const openMenu = () => setIsOpen(!isOpen);
   return (
     <div className="top">
       <div className={styles.logoWrapper}>
-        <div className={styles.logo}>
-          <Image src={Logo} />
+        <div className={styles.logo} onClick={() => route.push("/")}>
+          <Image src={newLogo} />
         </div>
       </div>
       <nav>
@@ -47,11 +50,12 @@ const Navbar = () => {
                 <div className={styles.burgerNavLink}>Tutup</div>
               </div>
               <div className={styles.burgerNavLinkGroup}>
-                <div>Kategori</div>
-                <div>List Transaksi</div>
+                <div>
+                  <Link href="/catalog">
+                    Kategori
+                  </Link>
+                </div>
                 <div>Keranjang</div>
-                <div>Alamat Saya</div>
-                <div>Keluar</div>
               </div>
             </div>
           </div>
