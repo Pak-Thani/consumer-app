@@ -1,7 +1,17 @@
+/* SNACKBAR CONTAINER */
+.snackbarContainer{
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+  background-color: purple;
+  align-items: center;
+}
+
 .container {
   text-align: center;
   width: 100%;
   position: relative;
+  margin: 0 auto;
 }
 
 .imageProduct {
