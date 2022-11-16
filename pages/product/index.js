@@ -39,7 +39,7 @@ export default function ProductDetail() {
   };
   const handleEmptyProduct = () => {
     setIsActive(true);
-    setMessage("Produk Unavailable");
+    setMessage("Product Unavailable");
     setType("error");
   };
 
@@ -87,7 +87,7 @@ export default function ProductDetail() {
               Beli
             </div>
           ) : (
-            <div className={styles.buyButton} onClick={handleEmptyProduct}>
+            <div className={styles.EmptybuyButton} onClick={handleEmptyProduct}>
               Beli
             </div>
           )}
