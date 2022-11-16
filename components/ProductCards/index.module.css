@@ -40,10 +40,19 @@
 
 .cardTitle {
 	font-size: 14px;
+	white-space: nowrap;
+	clear: both;
+	overflow: hidden;
+
+	text-overflow: ellipsis;
 }
 
 .cardText {
+	width: 100%;
+	text-overflow:ellipsis;
 	font-size: 12px;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 .cardText span {
