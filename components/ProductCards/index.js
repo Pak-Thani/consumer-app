@@ -4,6 +4,7 @@ import styles from "./index.module.css";
 
 function ProductCards({ product }) {
   const router = useRouter();
+  console.log(product);
 
   return (
     <>
