@@ -11,11 +11,10 @@ const FloatingCart = () => {
     const {
         getTotalItem,
       } = useContext(Context);
-    
       return (
         <>
         <div className={styles.floatingContainer} onClick={() => route.push("/cart")}>
-            <div className={styles.totalItemContainer}>
+            <div className={getTotalItem() === 0 ? [styles.totalItemContainer]:[styles.totalItemContainer,styles.visible].join(" ")}>
 
             <p>{getTotalItem()}</p>
             </div>

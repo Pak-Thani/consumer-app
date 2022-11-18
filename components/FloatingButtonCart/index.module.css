@@ -12,18 +12,20 @@
 }
 
 .totalItemContainer {
-    /* position: inherit; */
-    /* position: absolute; */
+    visibility: hidden;
     text-align: center;
     width: 30px;
     height: 30px;
     line-height: 30px;
     border-radius: 50%;
-    /* padding: 5px; */
     display: inline-block;
     z-index: 100;
     margin-left: 40px;
     background-color: #DE4444;
+}
+
+.totalItemContainer.visible {
+    visibility: visible;
 }
 
 @media only screen and (min-width: 600px) {
