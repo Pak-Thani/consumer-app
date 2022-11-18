@@ -2,7 +2,7 @@ import styles from "./index.module.css";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { getCategoryProducyByCategorySlug } from "../../api";
-import { ProductCards } from "../../components";
+import { FloatingButtonCart, ProductCards } from "../../components";
 import { useSnackbar } from "../../utils/snackbartUtils";
 import { CustomSnackbar } from "../../components/SnackBar";
 // import Snackbar from "../../components/SnackBar";
@@ -28,7 +28,7 @@ const CatalogSlug = () => {
       setCategoryData(data);
     }
   }, [categorySlug]);
-  console.log(categoryData);
+  // console.log(categoryData);
 
   if (!categoryData)
     return (
@@ -39,6 +39,7 @@ const CatalogSlug = () => {
     );
   return (
     <>
+    <FloatingButtonCart/>
       <div key={categoryData.name} className={styles.container}>
         <div className={styles.headTitle}>
           <p>

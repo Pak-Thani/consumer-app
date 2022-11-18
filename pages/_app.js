@@ -5,6 +5,8 @@ import style from "../public/style/global.module.css";
 import { Navbar } from "../components";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+// import { ShoppingCartProvider } from '../context/ShoppingCartContext'
+import { ContextProvider } from "../context/AppContext";
 
 export default function App({ Component, pageProps }) {
   const store = useStore(pageProps.initialReduxState);
@@ -25,13 +27,15 @@ export default function App({ Component, pageProps }) {
   }, [route]);
 
   return (
-    <Provider store={store}>
-      <div className={style.mainWrapper}>
-        <div className={style.main}>
-          {isNavbar && <Navbar />}
-          <Component {...pageProps} />
+    <ContextProvider>
+      <Provider store={store}>
+        <div className={style.mainWrapper}>
+          <div className={style.main}>
+            {isNavbar && <Navbar />}
+            <Component {...pageProps} />
+          </div>
         </div>
-      </div>
-    </Provider>
+      </Provider>
+    </ContextProvider>
   );
 }

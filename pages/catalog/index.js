@@ -1,9 +1,11 @@
 import styles from "./index.module.css";
-import {  CategoryButton } from "../../components";
+import {  CategoryButton, FloatingButtonCart } from "../../components";
 import { getAllCategory } from "../../api";
 
 const Index = ({ categorySections }) => {
   return (
+    <>
+    <FloatingButtonCart/>
     <div className={styles.container}>
       <div className={styles.headTitle}>
         
@@ -12,9 +14,10 @@ const Index = ({ categorySections }) => {
       <div className={styles.catalogButtonContainer}>
         {categorySections.map((categorySection, key) => (
           <CategoryButton data={categorySection} key={key} />
-        ))}
+          ))}
       </div>
     </div>
+          </>
   );
 };
 

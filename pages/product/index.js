@@ -1,20 +1,20 @@
 import styles from "./index.module.css";
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import fotoproduct from "../../public/bayam.png";
+import { useContext, useEffect, useState } from "react";
 import ArrowBackBlack from "../../public/images/arrow-back-black.svg";
 import { useRouter } from "next/router";
 import { getProductByProductSlug } from "../../api";
 import { numberPriceToStringPrice } from "../../utils/productUtils";
 import { useSnackbar } from "../../utils/snackbartUtils";
-import { CustomSnackbar, SnackbarError } from "../../components/SnackBar";
+import { CustomSnackbar } from "../../components/SnackBar";
+import { Context } from "../../context/AppContext";
+import { FloatingButtonCart } from "../../components";
 
 export default function ProductDetail() {
   const [productData, setProductData] = useState(undefined);
   const {
     isActive,
     message,
-    openSnackBar,
     setIsActive,
     setMessage,
     type,
@@ -25,6 +25,9 @@ export default function ProductDetail() {
   const {
     query: { productSlug },
   } = route;
+  const {
+    addToCart2,
+  } = useContext(Context);
 
   useEffect(async () => {
     if (productSlug) {
@@ -33,6 +36,7 @@ export default function ProductDetail() {
     }
   }, [productSlug]);
   const handleSubmitProduct = () => {
+    addToCart2(productData.data)
     setIsActive(true);
     setMessage("Added to Cart");
     setType("info");
@@ -54,6 +58,7 @@ export default function ProductDetail() {
   return (
     <>
       <div className={styles.container}>
+        <FloatingButtonCart/>
         <div className={styles.snackbarContainer}>
           <CustomSnackbar isActive={isActive} message={message} type={type} />
         </div>

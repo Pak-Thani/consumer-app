@@ -1,6 +1,9 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import styles from "./index.module.css";
+import {Context} from '../../context/AppContext';
+import { useContext } from "react";
+
 function ProductCards({
   product,
   setParentActive,
@@ -8,10 +11,17 @@ function ProductCards({
   setParentType,
 }) {
   const router = useRouter();
+
+  const {
+    addToCart2,
+  } = useContext(Context);
+
   const handleSubmitProduct = () => {
+    // addToCart2(product);
     setParentActive(true);
     setParentMsg("Added to Cart");
     setParentType("info");
+    addToCart2(product)
   };
   const handleEmptyProduct = () => {
     setParentActive(true);

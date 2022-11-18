@@ -1,0 +1,33 @@
+.floatingContainer {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    bottom: 90px;
+    z-index: 10;
+    margin-left: 80%;
+}
+
+.imgCart {
+    z-index: -1;
+}
+
+.totalItemContainer {
+    /* position: inherit; */
+    /* position: absolute; */
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    /* padding: 5px; */
+    display: inline-block;
+    z-index: 100;
+    margin-left: 40px;
+    background-color: #DE4444;
+}
+
+@media only screen and (min-width: 600px) {
+    .floatingContainer {
+        margin-left: 390px;
+    }
+}
