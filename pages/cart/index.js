@@ -5,15 +5,24 @@ import ItemCart from "../../components/CartItem";
 import { numberPriceToStringPrice } from "../../utils/productUtils";
 const Index = ({}) => {
   const { cart, getTotalPrice } = useContext(Context);
+  if (!cart)
+  return (
+    <div className={styles.globalContainer}>
+      <div className={styles.container}>
+        <p className={styles.headerTitle}>Keranjang Kosong</p>
+      </div>
+    </div>
+  );
+  console.log(cart.length)
   return (
     <>
       <div className={styles.globalContainer}>
         <div className={styles.container}>
           <p className={styles.headerTitle}>Cart</p>
-          {}
-          {cart.map((product) => {
+          {cart.length === 0 ?  <p className={styles.emptyCardTitle}>Keranjang Kosong</p> : cart.map((product) => {
             return <ItemCart product={product} />;
           })}
+          
         </div>
         <div className={styles.cartFooter}>
           <div className={styles.cartFooterLeft}>
