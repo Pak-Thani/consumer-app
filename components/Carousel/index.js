@@ -6,6 +6,20 @@ import ArrowBack from "../../public/images/arrow-back.svg";
 export default function Carousel() {
   const [carouselImageListIndex, setCarouselImageListIndex] = useState(0);
   const carouselImageList = ["/3.jpg", "/6.jpg", "/2.jpg", "/5.jpg", "/1.jpg"];
+  const delay = 2500;
+  const [isloading] = useState(true);
+  
+  useEffect(() => {
+    setTimeout(
+      () =>
+      setCarouselImageListIndex((prevIndex) =>
+          prevIndex === carouselImageList.length - 1 ? 0 : prevIndex + 1
+        ),
+      delay
+    );
+
+    return () => {};
+  }, [carouselImageListIndex]);
 
   const handleOnClickPrevCarousel = () => {
     if (carouselImageListIndex === 0) {
@@ -46,9 +60,11 @@ export default function Carousel() {
             layout="fill"
             objectFit="cover"
             alt=" "
+            className={styles.skeleton}
           />
         </div>
       </div>
     </div>
   );
 }
+
