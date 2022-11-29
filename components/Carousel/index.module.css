@@ -3,7 +3,7 @@
   position: relative;
 }
 
-.button {
+/* .button {
   cursor: pointer;
   position: absolute;
   color: white;
@@ -14,7 +14,7 @@
   z-index: 1;
   opacity: .6;
   top: 40px;
-}
+} */
 
 .prev {
   left: 16px;
@@ -62,3 +62,32 @@
     background-color: hsl(200, 20%, 95%);
   }
 }
+
+.swiperslide{
+  width: 100%;
+}
+
+.swiperNavNext,
+.swiperNavPrev {
+  top:50%;
+  position: absolute;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.swiperNavPrev {
+  left:0;
+  background-image: url('../../public/images/arrow-back.svg');
+}
+
+.swiperNavNext {
+  right:0;
+  background-image: url('../../public/images/arrow-back.svg');
+}
+
