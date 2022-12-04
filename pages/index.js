@@ -3,12 +3,14 @@ import { Carousel, CustomSection, FloatingButtonCart } from "../components";
 import { getAllCustomSection } from "../api";
 // import { FloatingCart } from "../components/FloatingButtonCart";
 
+
 const Index = ({ customSections }) => {
   return (
     <div>
       <Carousel />
       <div className={styles.customSectionWrapper}>
         <FloatingButtonCart/>
+
         {customSections.map((customSection, key) => (
           <CustomSection data={customSection} key={key} />
         ))}

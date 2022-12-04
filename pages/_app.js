@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }) {
   const [isNavbar, setIsNavbar] = useState(true);
   const { route } = useRouter();
 
-  // disable navbar for soume route
+
   useEffect(() => {
     switch (route) {
       case "/product":

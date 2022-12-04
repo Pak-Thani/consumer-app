@@ -26,7 +26,6 @@
 	border-radius: 10px;
 	margin: 0 auto;
 	overflow: hidden;
-}
 
 .cardImgTop {
 	width: 100%;
@@ -45,14 +44,6 @@
 	overflow: hidden;
 
 	text-overflow: ellipsis;
-}
-
-.cardText {
-	width: 100%;
-	text-overflow:ellipsis;
-	font-size: 12px;
-	overflow: hidden;
-	white-space: nowrap;
 }
 
 .cardText span {

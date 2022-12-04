@@ -25,9 +25,11 @@ export default function ProductDetail() {
   const {
     query: { productSlug },
   } = route;
+
   const {
     addToCart2,
   } = useContext(Context);
+
 
   useEffect(async () => {
     if (productSlug) {
@@ -35,6 +37,7 @@ export default function ProductDetail() {
       setProductData(data);
     }
   }, [productSlug]);
+
   const handleSubmitProduct = () => {
     addToCart2(productData.data)
     setIsActive(true);
@@ -99,5 +102,6 @@ export default function ProductDetail() {
         </div>
       </div>
     </>
+
   );
 }

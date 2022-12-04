@@ -16,6 +16,7 @@ const CatalogSlug = () => {
     type,
     setType,
   } = useSnackbar();
+
   const route = useRouter();
   const {
     query: { categorySlug },

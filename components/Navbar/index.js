@@ -58,6 +58,7 @@ const Navbar = () => {
                 <div>
                     <Link href="/cart">Keranjang</Link>
                   </div>
+
               </div>
             </div>
           </div>

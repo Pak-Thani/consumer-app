@@ -14,6 +14,7 @@ const CustomSection = ({ data }) => {
     type,
     setType,
   } = useSnackbar();
+const CustomSection = ({ data }) => {
   return (
     <div key={data.title} className={styles.customSection}>
       <div className={styles.customSectionHead}>

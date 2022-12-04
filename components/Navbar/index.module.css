@@ -193,9 +193,11 @@
   }
 }
 
+
 @media only screen and (max-width: 400px) {
   .burgerNavClose {
     padding-right: 10px;
+
   }
 
   .burgerNavWrapper.active {

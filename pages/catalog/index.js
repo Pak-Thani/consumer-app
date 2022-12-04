@@ -6,6 +6,7 @@ const Index = ({ categorySections }) => {
   return (
     <>
     <FloatingButtonCart/>
+
     <div className={styles.container}>
       <div className={styles.headTitle}>
         
