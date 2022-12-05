@@ -55,7 +55,9 @@ const Navbar = () => {
                     Kategori
                   </Link>
                 </div>
-                <div>Keranjang</div>
+                <div>
+                    <Link href="/cart">Keranjang</Link>
+                  </div>
               </div>
             </div>
           </div>
