@@ -4,6 +4,90 @@ const Context = React.createContext();
 
 function ContextProvider({ children }) {
   const [cart, setCart] = useState([]);
+  const [contactInfo, setContactInfo] = useState({
+    name: "",
+    email: "",
+    phonenumber: "",
+  });
+  const [data, setData] = useState({
+    name:"",
+    kabupuaten:"",
+    kecamatan:"",
+    alamat:"",
+    detailAlamat:"",
+    nomorWa:"",
+    shipping:"",
+    shipping_1:"",
+    shipping_2:"",
+    shipping_3:"",
+    shipping_4:"",
+  });
+
+  const handleChange = (e) => {
+    let value = e.target.value;
+    let name = e.target.name;
+    if (name === "time_1") {
+      setData({
+        ...data,
+        shipping_1: value,
+        shipping_2: "",
+        shipping_3: "",
+        shipping_4: "",
+        shipping: value,
+      });
+    } else if (name === "time_2") {
+      setData({
+        ...data,
+        shipping_1: "",
+        shipping_2: value,
+        shipping_3: "",
+        shipping_4: "",
+        shipping: value,
+      });
+    } 
+    else if (name === "time_3") {
+      setData({
+        ...data,
+        shipping_1: "",
+        shipping_2: "",
+        shipping_3: value,
+        shipping_4: "",
+        shipping: value,
+      });
+    }else if (name === "time_4") {
+      setData({
+        ...data,
+        shipping_1: "",
+        shipping_2: "",
+        shipping_3: "",
+        shipping_4: value,
+        shipping: value,
+      });
+    }
+    else {
+      setData({ ...data, [name]: value });
+    }
+  };
+  const handlerShipping = (shipping)=>{
+    if(shipping === 'time_1'){
+      return '08.00 - 10.00'
+    }
+    else if(shipping === 'time_2'){
+      return '12.00 - 12.00'
+    }
+    if(shipping === 'time_3'){
+      return '13.00 - 15.00'
+    }
+    if(shipping === 'time_4'){
+      return '15.00 - 17.00'
+    }
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(data);
+  };
+
   useEffect(() => {
     const cartFromLocalStorage = JSON.parse(localStorage.getItem("cartItems"));
     if (cartFromLocalStorage) {
@@ -88,6 +172,10 @@ function ContextProvider({ children }) {
     <Context.Provider
       value={{
         cart,
+        data,
+        setData,
+        handleChange,
+        handleSubmit,
         addToCart2,
         removeFromCart2,
         quantityPlus,
@@ -97,6 +185,7 @@ function ContextProvider({ children }) {
         getQuantity,
         getTotalPrice,
         getTotalItem,
+        handlerShipping
       }}
     >
       {children}

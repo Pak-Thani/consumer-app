@@ -3,7 +3,9 @@ import { Context } from "../../context/AppContext";
 import { useContext } from "react";
 import ItemCart from "../../components/CartItem";
 import { numberPriceToStringPrice } from "../../utils/productUtils";
+import { useRouter } from "next/router";
 const Index = ({}) => {
+  const route = useRouter();
   const { cart, getTotalPrice } = useContext(Context);
   if (!cart)
   return (
@@ -13,7 +15,6 @@ const Index = ({}) => {
       </div>
     </div>
   );
-  console.log(cart.length)
   return (
     <>
       <div className={styles.globalContainer}>
@@ -32,7 +33,7 @@ const Index = ({}) => {
             </p>
           </div>
           <div className={styles.cartFooterRight}>
-            <div className={styles.btn}>Beli</div>
+            <div className={styles.btn} onClick={() => route.push("/checkout/information")}>Beli</div>
           </div>
         </div>
       </div>
