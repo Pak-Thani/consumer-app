@@ -17,10 +17,9 @@ const Index = ({}) => {
           })}
           
         
-        <div className={styles.priceContainer}>
+        {/* <div className={styles.priceContainer}>
             <div><p className={styles.string}>Subtotal</p><p className={styles.price}>{numberPriceToStringPrice(getTotalPrice())}</p></div>
-            <div><p className={styles.string}>Shipping</p><p className={styles.price}>Tahap Selanjutnya</p></div>
-        </div>
+        </div> */}
         <div className={styles.totalPriceContainer}>
             <p>Total</p> <h1>{numberPriceToStringPrice(getTotalPrice())}</h1>
         </div>
