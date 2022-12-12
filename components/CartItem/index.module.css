@@ -1,8 +1,8 @@
 .skeleton {
-	animation: skeleton-loading 1s linear infinite alternate;
+    animation: skeleton-loading 1s linear infinite alternate;
 }
 
-.ItemContainer{
+.ItemContainer {
     margin-top: 1rem;
     display: flex;
     flex-direction: row;
@@ -12,70 +12,77 @@
     padding-bottom: 1rem;
     border-bottom: solid 4px #E7E7E7;
 }
+
 .imgContainer {
-	width: 67px;
-	height: 67px;
-	position: relative
+    width: 67px;
+    height: 67px;
+    position: relative
 }
 
-.midleContainer{
+.midleContainer {
     margin-left: 1rem;
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
 }
-.productName{
+
+.productName {
     margin-bottom: 0;
     font-family: 'Nunito';
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 19px;
-}
-.productQty{
-    font-family: 'Nunito';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 19px;
-color: #A0A0A0;
-}
-.productPrice{
-    font-family: 'Nunito';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 19px;
-margin-bottom: 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 19px;
 }
 
-.buttonContainer{
+.productQty {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #A0A0A0;
+}
+
+.productPrice {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 0;
+}
+
+.buttonContainer {
     width: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-margin-top: 0.5rem;}
-.buttonContainer p{
+    margin-top: 0.5rem;
+}
+
+.buttonContainer p {
     border: 0.7px solid #A0A0A0;
     margin: auto;
-    line-height: 17px; 
+    line-height: 17px;
     padding: 0;
     margin: 0 0.5rem;
     align-items: left;
     text-align: center;
     font-family: 'Nunito';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 19px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
     width: 40px;
     height: 20px;
     border-radius: 4px;
     background-color: none;
 }
-.buttonContainer div{
+
+.buttonContainer div {
     margin: auto;
-    line-height: 17px; 
+    line-height: 17px;
     padding: 0;
     border: 1px solid black;
     margin: 0 auto;
@@ -85,19 +92,20 @@ line-height: 19px;
     height: 20px;
     border-radius: 5px;
     background-color: none;
+    cursor: pointer;
 }
 
-.rightContainer{
+.rightContainer {
     width: 20px;
     height: 20px;
     margin-left: auto;
     align-self: flex-end;
     justify-content: flex-end;
 }
-.trashCan{
+
+.trashCan {
     max-width: 20px;
     min-height: 20px;
     position: relative;
+    cursor: pointer;
 }
-
-

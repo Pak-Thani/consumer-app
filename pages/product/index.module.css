@@ -1,5 +1,5 @@
 /* SNACKBAR CONTAINER */
-.snackbarContainer{
+.snackbarContainer {
   display: block;
   width: 200px;
   margin: 0 auto;
@@ -117,6 +117,7 @@
   font-weight: 700;
   border-radius: 5px;
   background-color: #f7d100;
+  cursor: pointer;
 }
 
 /* LOADER */

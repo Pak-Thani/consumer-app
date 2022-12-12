@@ -16,6 +16,7 @@ const Index = ({}) => {
             return <CheckoutItem product={product} />;
           })}
           
+          
         
         {/* <div className={styles.priceContainer}>
             <div><p className={styles.string}>Subtotal</p><p className={styles.price}>{numberPriceToStringPrice(getTotalPrice())}</p></div>
@@ -36,8 +37,7 @@ const Index = ({}) => {
 
         </div>
         </div>
-        </div>
-        <div className={styles.globalContainer2}>
+        
         <div className={styles.cartFooter}>
           <div className={styles.cartFooterLeft}>
           <div className={styles.btnLeft} onClick={() => route.push("/cart")}>Kembali</div>
@@ -47,6 +47,9 @@ const Index = ({}) => {
           </div>
         </div>
         </div>
+        {/* <div className={styles.globalContainer2}>
+
+        </div> */}
       
     </>
   );

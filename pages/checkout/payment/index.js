@@ -55,9 +55,6 @@ const Index = ({}) => {
             </div>
         </div>
         </div>
-        </div>
-        <div className={styles.globalContainer2}>
-
         <div className={styles.cartFooter}>
           <div className={styles.cartFooterLeft}>
           <div className={styles.btnLeft} onClick={() => route.push("/checkout/shipping")}>Kembali</div>
@@ -67,6 +64,9 @@ const Index = ({}) => {
           </div>
         </div>
         </div>
+
+        
+    
       
     </>
   );
