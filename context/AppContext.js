@@ -4,10 +4,10 @@ const Context = React.createContext();
 
 function ContextProvider({ children }) {
   const [cart, setCart] = useState([]);
-  const [contactInfo, setContactInfo] = useState({
-    name: "",
-    email: "",
-    phonenumber: "",
+  const [payment, setPayment] = useState({
+    payment_1: "",
+    payment_2: "",
+    payment: "",
   });
   const [data, setData] = useState({
     name:"",
@@ -22,6 +22,30 @@ function ContextProvider({ children }) {
     shipping_3:"",
     shipping_4:"",
   });
+
+  const handlePayment = (e) =>{
+    let value = e.target.value;
+    let name = e.target.name;
+    if (name === "payment_1") {
+      setPayment({
+        ...payment,
+        payment_1: value,
+        payment_2: "",
+        payment: value,
+      });
+    } else if (name === "payment_2") {
+      setPayment({
+        ...payment,
+        payment_1: "",
+        payment_2: value,
+        payment: value,
+      });
+    } 
+    else {
+      setPayment({ ...payment, [name]: value });
+    }
+    console.log(payment)
+  }
 
   const handleChange = (e) => {
     let value = e.target.value;
@@ -173,6 +197,7 @@ function ContextProvider({ children }) {
       value={{
         cart,
         data,
+        payment,
         setData,
         handleChange,
         handleSubmit,
@@ -185,7 +210,8 @@ function ContextProvider({ children }) {
         getQuantity,
         getTotalPrice,
         getTotalItem,
-        handlerShipping
+        handlerShipping,
+        handlePayment
       }}
     >
       {children}

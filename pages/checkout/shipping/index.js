@@ -33,46 +33,50 @@ const Index = ({}) => {
         </div>
         <h1 className={styles.formTitle}>Select Shift Time</h1>
         <div className={styles.radioFormContainer}>
-            <div className={styles.radioForm}>
+            <label className={styles.radioForm} for="time_1" 
+            >
                 <div className={styles.formText}>
                     <div className={styles.imageContainer}>
                         <Image src={deliveryLogo} layout="fill" objectFit="cover"/>
                     </div>
                     <h3>08.00 - 10.00</h3>
                 </div>
-                <input type="radio" name="time_1" checked={data.shipping_1} onChange={handleChange}
+                <input type="radio" id="time_1" name="time_1" checked={data.shipping_1} onChange={handleChange}
                     value="time_1"/>
-            </div>
-            <div className={styles.radioForm}>
+            </label>
+            <label className={styles.radioForm} for="time_2" >
                 <div className={styles.formText}>
                     <div className={styles.imageContainer}>
                         <Image src={deliveryLogo} layout="fill" objectFit="cover"/>
                     </div>
                     <h3>10.00 - 12.00</h3>
                 </div>
-                <input type="radio" name="time_2" checked={data.shipping_2} onChange={handleChange}
+                <input type="radio" name="time_2" id="time_2" checked={data.shipping_2} onChange={handleChange}
                     value="time_2"/>
-            </div>
-            <div className={styles.radioForm}>
+            </label>
+            <label className={styles.radioForm} 
+            for="time_3" 
+            >
                 <div className={styles.formText}>
                     <div className={styles.imageContainer}>
                         <Image src={deliveryLogo} layout="fill" objectFit="cover"/>
                     </div>
                     <h3>13.00 - 15.00</h3>
                 </div>
-                <input type="radio" name="time_3" checked={data.shipping_3} onChange={handleChange}
+                <input type="radio" name="time_3" id="time_3" checked={data.shipping_3} onChange={handleChange}
                     value="time_3"/>
-            </div>
-            <div className={styles.radioForm}>
+            </label>
+            <label className={styles.radioForm} 
+            for="time_4"  >
                 <div className={styles.formText}>
                     <div className={styles.imageContainer}>
                         <Image src={deliveryLogo} layout="fill" objectFit="cover"/>
                     </div>
                     <h3>15.00 - 17.00</h3>
                 </div>
-                <input type="radio" name="time_4" checked={data.shipping_4} onChange={handleChange}
+                <input type="radio" name="time_4" id="time_4" checked={data.shipping_4} onChange={handleChange}
                     value="time_4"/>
-            </div>
+            </label>
         </div>
         </div>
         <div className={styles.cartFooter}>
