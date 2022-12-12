@@ -9,7 +9,7 @@
 .container {
     width: 90%;
     padding: 0px 16px 12px 16px;
-    margin: 52px auto 0 auto;
+    margin: 52px auto 10px auto;
     position: relative;
 }
 
@@ -141,7 +141,8 @@
     padding: 0.3rem 1rem;
     width: 100%;
     background-color: white;
-    margin-top: 50px;
+    margin-top: auto;
+    position: absolute;
     min-height: 60px;
     bottom: 0;
     position: sticky;
@@ -220,7 +221,7 @@
         padding: 0.3rem 1rem;
         width: 100%;
         background-color: white;
-        margin-top: 50px;
+        margin-top: auto;
         min-height: 60px;
         bottom: 0;
         position: sticky;

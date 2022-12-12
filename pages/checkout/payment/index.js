@@ -60,7 +60,7 @@ const Index = ({}) => {
           <div className={styles.btnLeft} onClick={() => route.push("/checkout/shipping")}>Kembali</div>
           </div>
           <div className={styles.cartFooterRight}>
-            <div className={styles.btnRight}  onClick={() => route.push("/checkout/shipping")}><span>Selesaikan Pesanan</span></div>
+            <div className={styles.btnRight}  onClick={() => alert('PESANAN NEXT KE BLA2')}><span>Selesaikan Pesanan</span></div>
           </div>
         </div>
         </div>

@@ -15,12 +15,6 @@ const Index = ({}) => {
           {cart.length === 0 ?  <p className={styles.emptyCardTitle}>Keranjang Kosong</p> : cart.map((product) => {
             return <CheckoutItem product={product} />;
           })}
-          
-          
-        
-        {/* <div className={styles.priceContainer}>
-            <div><p className={styles.string}>Subtotal</p><p className={styles.price}>{numberPriceToStringPrice(getTotalPrice())}</p></div>
-        </div> */}
         <div className={styles.totalPriceContainer}>
             <p>Total</p> <h1>{numberPriceToStringPrice(getTotalPrice())}</h1>
         </div>
@@ -47,10 +41,6 @@ const Index = ({}) => {
           </div>
         </div>
         </div>
-        {/* <div className={styles.globalContainer2}>
-
-        </div> */}
-      
     </>
   );
 };
