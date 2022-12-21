@@ -1,0 +1,84 @@
+.logoWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 170px;
+    cursor: pointer;
+  }
+  
+  .globalContainer {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: space-between;
+    /* display: flex; */
+    margin: 0 auto;
+    flex-direction: column;
+    /* background-color: blue; */
+}
+
+.imageContainer {
+    width: 210px;
+    height: 60px;
+    margin: 0 auto;
+    position: relative
+}
+.midleContainer{
+    width: 80%;
+    top: 50%;
+    align-self: center;
+    align-self: middle;
+    /* display: block; */
+    margin: 0 auto;
+    /* background-color: red; */
+}
+.midleContainer h3{
+    padding: 0;
+    text-align: center;
+    padding-left: 0.5rem;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+}
+.midleContainer h4{
+    padding: 0;
+    text-align: center;
+    padding-left: 0.5rem;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+}
+.midleContainer h1{
+    text-align: center;
+}
+.midleContainer p{
+    font-size: 14px;
+    margin: 0 auto;
+    width: 80%;
+    color: rgb(135, 138, 139);
+}
+.btnRight{
+    cursor: pointer;
+    margin: 0 auto;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    width: 80%;
+    padding: .4rem;
+    height: 40px;
+    background-color: #F7D100;
+    vertical-align: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}

@@ -19,6 +19,12 @@ export default function App({ Component, pageProps }) {
       case "/product":
         setIsNavbar(false);
         break;
+      case "/checkout/redirect":
+        setIsNavbar(false);
+        break;
+      case "/checkout/payment/method-bsi":
+        setIsNavbar(false);
+        break;
 
       default:
         setIsNavbar(true);
