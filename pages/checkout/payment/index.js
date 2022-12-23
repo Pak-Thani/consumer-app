@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import { numberPriceToStringPrice } from "../../../utils/productUtils";
 import BSILogo from "../../../public/images/BSILogo.png";
 import moneyLogo from "../../../public/images/moneyLogo.png";
+import newLogo from "../../../public/images/newLogo.png";
 
 import Image from "next/image";
 const Index = ({}) => {
@@ -15,6 +16,11 @@ const Index = ({}) => {
   // console.log(payment.payment);
   return (
     <>
+      <div className={styles.logoWrapper}>
+        <div className={styles.logo} onClick={() => route.push("/")}>
+          <Image src={newLogo} />
+        </div>
+      </div>
       <div className={styles.globalContainer}>
         <div className={styles.container}>
           {cart.length === 0 ? (

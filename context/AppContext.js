@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 const Context = React.createContext();
 
 function ContextProvider({ children }) {
+  const [search, setSearch] = useState("");
   const [cart, setCart] = useState([]);
   const [payment, setPayment] = useState({
     payment_1: "",
@@ -10,20 +11,25 @@ function ContextProvider({ children }) {
     payment: "",
   });
   const [data, setData] = useState({
-    name:"",
-    kabupuaten:"",
-    kecamatan:"",
-    alamat:"",
-    detailAlamat:"",
-    nomorWa:"",
-    shipping:"",
-    shipping_1:"",
-    shipping_2:"",
-    shipping_3:"",
-    shipping_4:"",
+    name: "",
+    kabupuaten: "",
+    kecamatan: "",
+    alamat: "",
+    detailAlamat: "",
+    nomorWa: "",
+    shipping: "",
+    shipping_1: "",
+    shipping_2: "",
+    shipping_3: "",
+    shipping_4: "",
   });
+  const handleSearch = (e) => {
+    let value = e.target.value;
+    setSearch(value);
+    // console.log(search);
+  };
 
-  const handlePayment = (e) =>{
+  const handlePayment = (e) => {
     let value = e.target.value;
     let name = e.target.name;
     if (name === "payment_1") {
@@ -40,12 +46,11 @@ function ContextProvider({ children }) {
         payment_2: value,
         payment: value,
       });
-    } 
-    else {
+    } else {
       setPayment({ ...payment, [name]: value });
     }
-    console.log(payment)
-  }
+    console.log(payment);
+  };
 
   const handleChange = (e) => {
     let value = e.target.value;
@@ -68,8 +73,7 @@ function ContextProvider({ children }) {
         shipping_4: "",
         shipping: value,
       });
-    } 
-    else if (name === "time_3") {
+    } else if (name === "time_3") {
       setData({
         ...data,
         shipping_1: "",
@@ -78,7 +82,7 @@ function ContextProvider({ children }) {
         shipping_4: "",
         shipping: value,
       });
-    }else if (name === "time_4") {
+    } else if (name === "time_4") {
       setData({
         ...data,
         shipping_1: "",
@@ -87,25 +91,23 @@ function ContextProvider({ children }) {
         shipping_4: value,
         shipping: value,
       });
-    }
-    else {
+    } else {
       setData({ ...data, [name]: value });
     }
   };
-  const handlerShipping = (shipping)=>{
-    if(shipping === 'time_1'){
-      return '08.00 - 10.00'
+  const handlerShipping = (shipping) => {
+    if (shipping === "time_1") {
+      return "08.00 - 10.00";
+    } else if (shipping === "time_2") {
+      return "12.00 - 12.00";
     }
-    else if(shipping === 'time_2'){
-      return '12.00 - 12.00'
+    if (shipping === "time_3") {
+      return "13.00 - 15.00";
     }
-    if(shipping === 'time_3'){
-      return '13.00 - 15.00'
+    if (shipping === "time_4") {
+      return "15.00 - 17.00";
     }
-    if(shipping === 'time_4'){
-      return '15.00 - 17.00'
-    }
-  }
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -186,15 +188,14 @@ function ContextProvider({ children }) {
       0
     );
   };
-  const getTotalItem = ()=>{
-    return cart.reduce(
-      (sum, { quantity }) => sum + quantity,
-      0
-    );
-  }
+  const getTotalItem = () => {
+    return cart.reduce((sum, { quantity }) => sum + quantity, 0);
+  };
   return (
     <Context.Provider
       value={{
+        search,
+        setSearch,
         cart,
         data,
         payment,
@@ -211,7 +212,8 @@ function ContextProvider({ children }) {
         getTotalPrice,
         getTotalItem,
         handlerShipping,
-        handlePayment
+        handlePayment,
+        handleSearch,
       }}
     >
       {children}
