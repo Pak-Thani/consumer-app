@@ -108,6 +108,13 @@ function ContextProvider({ children }) {
       return "15.00 - 17.00";
     }
   };
+  const handlerPaymenttoStr = (payment) => {
+    if (payment === "payment_1") {
+      return "BSI";
+    } else if (payment === "payment_2") {
+      return "CASH";
+    }
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -213,6 +220,7 @@ function ContextProvider({ children }) {
         getTotalItem,
         handlerShipping,
         handlePayment,
+        handlerPaymenttoStr,
         handleSearch,
       }}
     >
