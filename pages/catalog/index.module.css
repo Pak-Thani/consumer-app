@@ -1,0 +1,13 @@
+/* CATALOG PAGE */
+
+.main {
+    margin-top: 52px;
+    position: relative;
+  }
+  .catalogButtonContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-gap: 10px; */
+    /* background-color: #2196F3; */
+    /* padding: 10px; */
+  }

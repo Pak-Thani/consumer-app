@@ -1,0 +1,39 @@
+.customSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: scroll;
+	padding: 0px 16px 12px 16px;
+}
+
+.customSectionHead {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.customSectionHead h3 {
+ font-weight: 800;
+ font-size: 24px;
+}
+
+.viewMoreLink {
+  color: #4cb654;
+  text-decoration: none;
+  font-weight: 700;
+	font-size: 16px;
+}
+
+.viewMoreLink:hover {
+  color: #4cb654;
+  opacity: 0.7;
+}
+
+.customSectionBody {
+  display: flex;
+	width: 100%;
+	overflow-x: scroll;
+	padding: 10px 5px;
+}
+

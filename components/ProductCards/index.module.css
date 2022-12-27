@@ -1,0 +1,47 @@
+.card {
+  width: 120px;
+  height: 250px;
+  margin-right: 20px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+}
+
+.cardImgTop {
+	width: 120px;
+	height: 120px;
+	position: relative
+}
+
+.cardImgTop span {
+	border-radius: 10px 10px 0 0;
+}
+
+.cardTitle {
+	font-size: 14px;
+}
+
+.cardText {
+	font-size: 12px;
+}
+
+.cardText span {
+	font-size: 10px;
+	color: rgba(0,0,0, 0.6);
+
+}
+
+.cardBottomSection {
+	padding: 8px;
+}
+
+.btn {
+	width: 100%;
+	padding: .4rem;
+	background-color: #F7D100;
+	vertical-align: bottom;
+	font-weight: 700;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  border-radius: 5px;
+}

@@ -1,23 +1,30 @@
-import { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
-import Link from 'next/link'
-import { startClock } from '../actions'
-import Examples from '../components/examples'
+import styles from "./index.module.css";
+import { Carousel, CustomSection } from "../components";
+import { getAllCustomSection } from "../api";
 
-const Index = () => {
-  const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(startClock())
-  }, [dispatch])
+const Index = ({ customSections }) => {
+  console.log(customSections);
 
   return (
-    <>
-      <Examples />
-      <Link href="/show-redux-state">
-        <a>Click to see current Redux State</a>
-      </Link>
-    </>
-  )
+    <div>
+      <Carousel />
+      <div className={styles.customSectionWrapper}>
+
+        {customSections.map((customSection, key) => (
+          <CustomSection data={customSection} key={key} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export async function getServerSideProps() {
+  const allCustomSectionData = await getAllCustomSection();
+  return {
+    props: {
+      customSections: allCustomSectionData.data.customSections,
+    },
+  };
 }
 
-export default Index
+export default Index;
