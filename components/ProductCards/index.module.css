@@ -27,6 +27,7 @@
 .cardText span {
 	font-size: 10px;
 	color: rgba(0,0,0, 0.6);
+
 }
 
 .cardBottomSection {
@@ -42,5 +43,5 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-radius: 5px;
+  border-radius: 5px;
 }

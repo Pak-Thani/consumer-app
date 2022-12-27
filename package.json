@@ -24,6 +24,7 @@
     "router-js": "^3.9.1",
     "styled-components": "^5.3.6",
     "swiper": "^8.4.5",
+
     "swr": "^1.3.0"
   }
 }

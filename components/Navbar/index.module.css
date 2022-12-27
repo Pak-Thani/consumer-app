@@ -7,6 +7,7 @@
 }
 .logo {
   width: 140px;
+
 }
 
 .containerNav {
@@ -150,8 +151,7 @@
   z-index: 2;
   list-style-type: none;
   border: 1px solid black;
-  
-}
+
 .burgerNavLink {
   opacity: 0;
   transition: 0.1s;
@@ -201,3 +201,4 @@
     font-size: 12px;
   }
 }
+

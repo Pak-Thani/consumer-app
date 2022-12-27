@@ -4,10 +4,12 @@ import { getAllCustomSection } from "../api";
 
 const Index = ({ customSections }) => {
   console.log(customSections);
+
   return (
     <div>
       <Carousel />
       <div className={styles.customSectionWrapper}>
+
         {customSections.map((customSection, key) => (
           <CustomSection data={customSection} key={key} />
         ))}

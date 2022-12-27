@@ -10,7 +10,6 @@ export default function App({ Component, pageProps }) {
   const store = useStore(pageProps.initialReduxState)
   const [isNavbar, setIsNavbar] = useState(true)
   const { route } = useRouter()
-  
   // disable navbar for soume route
   useEffect(() => {
     switch (route) {

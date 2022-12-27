@@ -9,6 +9,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { useRef } from "react";
 
+
 export default function Carousel() {
   const [carouselImageListIndex, setCarouselImageListIndex] = useState(0);
   const carouselImageList = ["/3.jpg", "/6.jpg", "/2.jpg", "/5.jpg", "/1.jpg"];

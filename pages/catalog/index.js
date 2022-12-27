@@ -14,6 +14,7 @@ const Index = ({ categorySections }) => {
         ))}
       </div>
     </div>
+
   );
 };
 
@@ -24,6 +25,7 @@ export async function getStaticProps() {
     props: {
       categorySections: allCategorySectionData.data,
       // console.log(categorySection)
+
     },
   };
 }

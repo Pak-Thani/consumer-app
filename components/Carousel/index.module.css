@@ -16,6 +16,7 @@
   top: 40px;
 } */
 
+
 .prev {
   left: 16px;
 }
@@ -74,4 +75,5 @@
   /* background-image: url('/public/backbutton.png'); */
   color: white !important;
 }
+
 

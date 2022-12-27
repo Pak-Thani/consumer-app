@@ -2,6 +2,7 @@ import styles from "./index.module.css";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import fotoproduct from "../../public/bayam.png";
+
 import ArrowBackBlack from "../../public/images/arrow-back-black.svg";
 import { useRouter } from "next/router";
 import { getProductByProductSlug } from "../../api";
@@ -22,6 +23,7 @@ export default function ProductDetail() {
   // you can try another method data fetching that suitable for your case
   // i use this method to make me easier fetch data from client
   // if we can fetch data from server, we can reduce loading time and user experience
+
   useEffect(async () => {
     if (productSlug) {
       const data = await getProductByProductSlug(productSlug);
@@ -62,5 +64,6 @@ export default function ProductDetail() {
         </div>
       </div>
     </div>
+
   );
 }

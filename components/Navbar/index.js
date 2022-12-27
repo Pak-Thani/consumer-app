@@ -24,6 +24,7 @@ const Navbar = () => {
               type="search"
               aria-label="Search"
             />
+
             <div
               className={`${styles.Iconsearch} ${isOpen ? styles.active : ""}`}
             >
@@ -56,6 +57,7 @@ const Navbar = () => {
                 <div>Keranjang</div>
                 <div>Alamat Saya</div>
                 <div>Keluar</div>
+
               </div>
             </div>
           </div>

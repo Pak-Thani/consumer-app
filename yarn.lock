@@ -1145,6 +1145,7 @@
   "resolved" "https://registry.npmjs.org/@popperjs/core/-/core-2.11.6.tgz"
   "version" "2.11.6"
 
+
 "@reduxjs/toolkit@^1.8.5":
   "integrity" "sha512-4Ia/Loc6WLmdSOzi7k5ff7dLK8CgG2b8aqpLsCAJhazAzGdp//YBUSaj0ceW6a3kDBDNRrq5CRwyCS0wBiL1ig=="
   "resolved" "https://registry.npmjs.org/@reduxjs/toolkit/-/toolkit-1.8.6.tgz"
@@ -2492,6 +2493,7 @@
   dependencies:
     "ssr-window" "^4.0.0"
 
+
 "domain-browser@~1.1.0":
   "integrity" "sha512-fJ5MoHxe69h3E4/lJtFRhcWwLb04bhIBSfvCEMS1YDH+/9yEZTqBHTSTgch8nCP5tE5k2gdQEjodUqJzy7qJ9Q=="
   "resolved" "https://registry.npmjs.org/domain-browser/-/domain-browser-1.1.7.tgz"
@@ -3732,6 +3734,7 @@
   "resolved" "https://registry.npmjs.org/ssr-window/-/ssr-window-4.0.2.tgz"
   "version" "4.0.2"
 
+
 "stable@^0.1.8":
   "integrity" "sha512-ji9qxRnOVfcuLDySj9qzhGSEFVobyt1kIOSkj1qZzYLzq7Tos/oUUWvotUPQLlrsidqsK6tBH89Bc9kL5zHA6w=="
   "resolved" "https://registry.npmjs.org/stable/-/stable-0.1.8.tgz"
@@ -3868,6 +3871,7 @@
   dependencies:
     "dom7" "^4.0.4"
     "ssr-window" "^4.0.2"
+
 
 "swr@^1.3.0":
   "integrity" "sha512-dkghQrOl2ORX9HYrMDtPa7LTVHJjCTeZoB1dqTbnnEDlSvN8JEKpYIYurDfvbQFUUS8Cg8PceFVZNkW0KNNYPw=="

@@ -13,3 +13,11 @@ export async function getAllCategory() {
 export async function getProductByProductSlug(slug) {
   return fetchGet(`${CONSUMER_API_BASE_URL}/api/product/${slug}`);
 }
+//https://pakthani-644xh.ondigitalocean.app/api/category/sayuran
+export async function getCategoryProducyByCategorySlug(slug) {
+  return fetchGet(`${CONSUMER_API_BASE_URL}/api/category/${slug}`);
+}
+
+export async function getProductBySearch(slug) {
+  return fetchGet(`${CONSUMER_API_BASE_URL}/api/search/${slug}`);
+}

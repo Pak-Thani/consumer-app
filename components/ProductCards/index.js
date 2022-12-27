@@ -32,6 +32,7 @@ function ProductCards({ product }) {
         <div className={styles.btn}>Beli</div>
       </div>
     </div>
+
   );
 }
 

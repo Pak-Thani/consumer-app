@@ -1,6 +1,7 @@
 import ProductCards from "../ProductCards";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
 import Image from "next/image";
 
@@ -50,6 +51,7 @@ const CategoryButton = ({ data }) => {
           <h3>{data.title}</h3>
         </div>
       </div> */}
+
     </>
   );
 };
