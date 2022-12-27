@@ -7,18 +7,10 @@ import trashCan from "../../public/images/trashCan.png";
 
 const ItemCart = ({ product }) => {
   const {
-    cart,
-    addToCart2,
-    removeFromCart2,
-    setQuantity,
     setEmptyQuantity,
-    clearCart,
     quantityPlus,
     quantityMinus,
   } = useContext(Context);
-  console.log("cart");
-  console.log(cart);
-  console.log("---");
   return (
     <>
       <div className={styles.ItemContainer}>
