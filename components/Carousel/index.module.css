@@ -3,7 +3,7 @@
   position: relative;
 }
 
-.button {
+/* .button {
   cursor: pointer;
   position: absolute;
   color: white;
@@ -14,7 +14,8 @@
   z-index: 1;
   opacity: .6;
   top: 40px;
-}
+} */
+
 
 .prev {
   left: 16px;
@@ -48,3 +49,31 @@
 .carouselImageWrapper span {
   border-radius: 10px;
 }
+
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 70%);
+  }
+
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}
+
+.arrowPrev {
+  left:100px;
+  /* background-image: url('/public/backbutton.png'); */
+  color: rgb(75, 39, 39);
+}
+
+.arrowNext {
+  right:0;
+  /* background-image: url('/public/backbutton.png'); */
+  color: white !important;
+}
+
+
