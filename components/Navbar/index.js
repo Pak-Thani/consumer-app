@@ -3,24 +3,14 @@ import Search from "../../public/images/search.svg";
 import Image from "next/image";
 import styles from "./index.module.css";
 import Link from "next/link";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/router";
-import { Context } from "../../context/AppContext";
+
 
 const Navbar = () => {
   const route = useRouter();
-  const { search, setSearch, handleSearch } = useContext(Context);
-  console.log(search);
   const [isOpen, setIsOpen] = useState(false);
   const openMenu = () => setIsOpen(!isOpen);
-  const handleSubmitSearch = (e) => {
-    e.preventDefault();
-    route.push({
-      pathname: "/search",
-      query: { productSlug: search },
-    });
-    setSearch("");
-  };
   return (
     <div className="top">
       <div className={styles.logoWrapper}>
@@ -31,17 +21,12 @@ const Navbar = () => {
       <nav>
         <div className={styles.containerNav}>
           <div className={styles.searchWithBurger}>
-            <form onSubmit={handleSubmitSearch}>
-              <input
-                className={`${styles.search} ${isOpen ? styles.active : ""}`}
-                placeholder="Pencarian"
-                type="search"
-                // name="search"
-                // aria-label="Search"
-                onChange={handleSearch}
-                value={search}
-              />
-            </form>
+            <input
+              className={`${styles.search} ${isOpen ? styles.active : ""}`}
+              placeholder="Pencarian"
+              type="search"
+              aria-label="Search"
+            />
             <div
               className={`${styles.Iconsearch} ${isOpen ? styles.active : ""}`}
             >
@@ -66,11 +51,13 @@ const Navbar = () => {
               </div>
               <div className={styles.burgerNavLinkGroup}>
                 <div>
-                  <Link href="/catalog">Kategori</Link>
+                  <Link href="/catalog">
+                    Kategori
+                  </Link>
                 </div>
                 <div>
-                  <Link href="/cart">Keranjang</Link>
-                </div>
+                    <Link href="/cart">Keranjang</Link>
+                  </div>
               </div>
             </div>
           </div>
