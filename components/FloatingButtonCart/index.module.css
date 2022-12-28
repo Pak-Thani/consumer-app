@@ -1,0 +1,35 @@
+.floatingContainer {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    bottom: 90px;
+    z-index: 10;
+    margin-left: 80%;
+}
+
+.imgCart {
+    z-index: -1;
+}
+
+.totalItemContainer {
+    visibility: hidden;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    z-index: 100;
+    margin-left: 40px;
+    background-color: #DE4444;
+}
+
+.totalItemContainer.visible {
+    visibility: visible;
+}
+
+@media only screen and (min-width: 600px) {
+    .floatingContainer {
+        margin-left: 390px;
+    }
+}
