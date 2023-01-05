@@ -1,6 +1,6 @@
 module.exports = {
   images: {
-    domains: ['sgp1.digitaloceanspaces.com'],
+    domains: ["pakthani.s3.amazonaws.com"],
   },
   webpack(config) {
     config.module.rules.push({

@@ -7,7 +7,6 @@ const Index = ({ customSections }) => {
   return (
     <div>
       <Carousel />
-      TEST
       <div className={styles.customSectionWrapper}>
         <FloatingButtonCart />
         {customSections.map((customSection, key) => (
