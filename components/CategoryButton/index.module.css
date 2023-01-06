@@ -38,6 +38,9 @@
   justify-content: center;
   align-items: center;
 }
+.img{
+  min-width: 80px;
+}
 
 .categoryName {
   margin-top: 0.5rem;
