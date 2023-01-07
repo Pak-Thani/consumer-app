@@ -97,16 +97,16 @@ function ContextProvider({ children }) {
   };
   const handlerShipping = (shipping) => {
     if (shipping === "time_1") {
-      return "08.00 - 10.00";
+      return "10.30 - 11.30";
     } else if (shipping === "time_2") {
-      return "12.00 - 12.00";
+      return "12.00 - 13.00";
     }
     if (shipping === "time_3") {
-      return "13.00 - 15.00";
+      return "15.30 - 16.30";
     }
-    if (shipping === "time_4") {
-      return "15.00 - 17.00";
-    }
+    // if (shipping === "time_4") {
+    //   return "15.00 - 17.00";
+    // }
   };
   const handlerPaymenttoStr = (payment) => {
     if (payment === "payment_1") {

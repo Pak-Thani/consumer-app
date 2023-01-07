@@ -23,7 +23,7 @@ const CustomSection = ({ data }) => {
       <div className={styles.customSectionHead}>
         <h3>{data.title}</h3>
         {/* <Link href="/"> */}
-        <a
+        {/* <a
           className={styles.viewMoreLink}
           onClick={() =>
             router.push({
@@ -34,7 +34,7 @@ const CustomSection = ({ data }) => {
         >
           {" "}
           More
-        </a>
+        </a> */}
         {/* </Link> */}
       </div>
       <div className={styles.customSectionBody}>
