@@ -16,11 +16,11 @@ const redirect = () => {
     handlerPaymenttoStr,
     payment,
   } = useContext(Context);
-  console.log("Keranjang", cart);
-  console.log("dataPembeli", data);
-  console.log("totalPrice", getTotalPrice);
+  // console.log("Keranjang", cart);
+  // console.log("dataPembeli", data);
+  // console.log("totalPrice", getTotalPrice);
 
-  console.log(encodeURI("Alamat ; data"));
+  // console.log(encodeURI("Alamat ; data"));
   const TotalHarga = getTotalPrice();
   return (
     <>

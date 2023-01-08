@@ -86,22 +86,6 @@ const Index = ({}) => {
                 value="time_3"
               />
             </label>
-            {/* <label className={styles.radioForm} for="time_4">
-              <div className={styles.formText}>
-                <div className={styles.imageContainer}>
-                  <Image src={deliveryLogo} layout="fill" objectFit="cover" />
-                </div>
-                <h3>15.00 - 17.00</h3>
-              </div>
-              <input
-                type="radio"
-                name="time_4"
-                id="time_4"
-                checked={data.shipping_4}
-                onChange={handleChange}
-                value="time_4"
-              />
-            </label> */}
           </div>
         </div>
         <div className={styles.cartFooter}>

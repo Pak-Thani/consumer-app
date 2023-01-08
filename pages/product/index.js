@@ -12,22 +12,14 @@ import { FloatingButtonCart } from "../../components";
 
 export default function ProductDetail() {
   const [productData, setProductData] = useState(undefined);
-  const {
-    isActive,
-    message,
-    setIsActive,
-    setMessage,
-    type,
-    setType,
-  } = useSnackbar();
+  const { isActive, message, setIsActive, setMessage, type, setType } =
+    useSnackbar();
 
   const route = useRouter();
   const {
     query: { productSlug },
   } = route;
-  const {
-    addToCart2,
-  } = useContext(Context);
+  const { addToCart2 } = useContext(Context);
 
   useEffect(async () => {
     if (productSlug) {
@@ -36,7 +28,7 @@ export default function ProductDetail() {
     }
   }, [productSlug]);
   const handleSubmitProduct = () => {
-    addToCart2(productData.data)
+    addToCart2(productData.data);
     setIsActive(true);
     setMessage("Added to Cart");
     setType("info");
@@ -58,7 +50,7 @@ export default function ProductDetail() {
   return (
     <>
       <div className={styles.container}>
-        <FloatingButtonCart/>
+        <FloatingButtonCart />
         <div className={styles.snackbarContainer}>
           <CustomSnackbar isActive={isActive} message={message} type={type} />
         </div>
@@ -79,12 +71,9 @@ export default function ProductDetail() {
             <h2 className={styles.price}>
               {numberPriceToStringPrice(productData.data.pricePerQty)}
             </h2>
-            <h4 className={styles.qty}>/ {productData.data.qty}</h4>
           </div>
           <p className={styles.productDetailTitle}>Detail Produk</p>
           <p className={styles.productDetail}>{productData.data.description}</p>
-          <p className={styles.variant}>Varian</p>
-          <div className={styles.variantSelection}>{productData.data.qty}</div>
         </div>
         <div className={styles.buyButtonWrapper}>
           {productData.data.isStockAvailable ? (

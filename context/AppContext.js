@@ -1,8 +1,11 @@
+import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 
 const Context = React.createContext();
 
 function ContextProvider({ children }) {
+  const route = useRouter();
+
   const [search, setSearch] = useState("");
   const [cart, setCart] = useState([]);
   const [payment, setPayment] = useState({
@@ -23,9 +26,24 @@ function ContextProvider({ children }) {
     shipping_3: "",
     shipping_4: "",
   });
+  const handleSubmitSearch = (e) => {
+    e.preventDefault();
+    route.push({
+      pathname: "/search",
+      query: { productSlug: search },
+    });
+    setSearch(search);
+  };
   const handleSearch = (e) => {
     let value = e.target.value;
     setSearch(value);
+    e.preventDefault();
+    route.push({
+      pathname: "/search",
+      query: { productSlug: value },
+    });
+    setSearch(value);
+    // handleSubmitSearch(e);
     // console.log(search);
   };
 
@@ -222,6 +240,7 @@ function ContextProvider({ children }) {
         handlePayment,
         handlerPaymenttoStr,
         handleSearch,
+        // handleSubmitSearch,
       }}
     >
       {children}
