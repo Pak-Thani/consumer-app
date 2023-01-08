@@ -43,7 +43,7 @@ const Index = ({}) => {
                 <div className={styles.imageContainer}>
                   <Image src={deliveryLogo} layout="fill" objectFit="cover" />
                 </div>
-                <h3>08.00 - 10.00</h3>
+                <h3>10.30 - 11.30</h3>
               </div>
               <input
                 type="radio"
@@ -59,7 +59,7 @@ const Index = ({}) => {
                 <div className={styles.imageContainer}>
                   <Image src={deliveryLogo} layout="fill" objectFit="cover" />
                 </div>
-                <h3>10.00 - 12.00</h3>
+                <h3>12.00 - 13.00</h3>
               </div>
               <input
                 type="radio"
@@ -75,7 +75,7 @@ const Index = ({}) => {
                 <div className={styles.imageContainer}>
                   <Image src={deliveryLogo} layout="fill" objectFit="cover" />
                 </div>
-                <h3>13.00 - 15.00</h3>
+                <h3>15.30 - 16.30</h3>
               </div>
               <input
                 type="radio"
@@ -84,22 +84,6 @@ const Index = ({}) => {
                 checked={data.shipping_3}
                 onChange={handleChange}
                 value="time_3"
-              />
-            </label>
-            <label className={styles.radioForm} for="time_4">
-              <div className={styles.formText}>
-                <div className={styles.imageContainer}>
-                  <Image src={deliveryLogo} layout="fill" objectFit="cover" />
-                </div>
-                <h3>15.00 - 17.00</h3>
-              </div>
-              <input
-                type="radio"
-                name="time_4"
-                id="time_4"
-                checked={data.shipping_4}
-                onChange={handleChange}
-                value="time_4"
               />
             </label>
           </div>

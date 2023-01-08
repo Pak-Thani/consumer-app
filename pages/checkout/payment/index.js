@@ -31,9 +31,6 @@ const Index = ({}) => {
             })
           )}
 
-          {/* <div className={styles.priceContainer}>
-            <div><p className={styles.string}>Subtotal</p><p className={styles.price}>{numberPriceToStringPrice(getTotalPrice())}</p></div>
-        </div> */}
           <div className={styles.totalPriceContainer}>
             <p>Total</p> <h1>{numberPriceToStringPrice(getTotalPrice())}</h1>
           </div>

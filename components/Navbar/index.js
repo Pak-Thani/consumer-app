@@ -9,18 +9,11 @@ import { Context } from "../../context/AppContext";
 
 const Navbar = () => {
   const route = useRouter();
-  const { search, setSearch, handleSearch } = useContext(Context);
-  console.log(search);
+  const { search, setSearch, handleSearch, handleSubmitSearch } =
+    useContext(Context);
+  // console.log(search);
   const [isOpen, setIsOpen] = useState(false);
   const openMenu = () => setIsOpen(!isOpen);
-  const handleSubmitSearch = (e) => {
-    e.preventDefault();
-    route.push({
-      pathname: "/search",
-      query: { productSlug: search },
-    });
-    setSearch("");
-  };
   return (
     <div className="top">
       <div className={styles.logoWrapper}>

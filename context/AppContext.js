@@ -1,8 +1,11 @@
+import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 
 const Context = React.createContext();
 
 function ContextProvider({ children }) {
+  const route = useRouter();
+
   const [search, setSearch] = useState("");
   const [cart, setCart] = useState([]);
   const [payment, setPayment] = useState({
@@ -23,9 +26,24 @@ function ContextProvider({ children }) {
     shipping_3: "",
     shipping_4: "",
   });
+  const handleSubmitSearch = (e) => {
+    e.preventDefault();
+    route.push({
+      pathname: "/search",
+      query: { productSlug: search },
+    });
+    setSearch(search);
+  };
   const handleSearch = (e) => {
     let value = e.target.value;
     setSearch(value);
+    e.preventDefault();
+    route.push({
+      pathname: "/search",
+      query: { productSlug: value },
+    });
+    setSearch(value);
+    // handleSubmitSearch(e);
     // console.log(search);
   };
 
@@ -97,16 +115,16 @@ function ContextProvider({ children }) {
   };
   const handlerShipping = (shipping) => {
     if (shipping === "time_1") {
-      return "08.00 - 10.00";
+      return "10.30 - 11.30";
     } else if (shipping === "time_2") {
-      return "12.00 - 12.00";
+      return "12.00 - 13.00";
     }
     if (shipping === "time_3") {
-      return "13.00 - 15.00";
+      return "15.30 - 16.30";
     }
-    if (shipping === "time_4") {
-      return "15.00 - 17.00";
-    }
+    // if (shipping === "time_4") {
+    //   return "15.00 - 17.00";
+    // }
   };
   const handlerPaymenttoStr = (payment) => {
     if (payment === "payment_1") {
@@ -222,6 +240,7 @@ function ContextProvider({ children }) {
         handlePayment,
         handlerPaymenttoStr,
         handleSearch,
+        // handleSubmitSearch,
       }}
     >
       {children}

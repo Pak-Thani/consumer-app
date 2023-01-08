@@ -28,6 +28,7 @@ const CatalogSlug = () => {
       setCategoryData(data);
     }
   }, [categorySlug]);
+  // console.log(categorySlug);
   // console.log(categoryData);
 
   if (!categoryData)
@@ -39,7 +40,7 @@ const CatalogSlug = () => {
     );
   return (
     <>
-    <FloatingButtonCart/>
+      <FloatingButtonCart />
       <div key={categoryData.name} className={styles.container}>
         <div className={styles.headTitle}>
           <p>
@@ -65,4 +66,23 @@ const CatalogSlug = () => {
     </>
   );
 };
+export async function getStaticProps() {
+  // const route = useRouter();
+  // const {
+  //   query: { categorySlug },
+  // } = route;
+  const data = await getCategoryProducyByCategorySlug(() => {
+    const route = useRouter();
+    const {
+      query: { categorySlug },
+    } = route;
+    return categorySlug;
+  });
+  console.log("dataaaaa", data);
+  return {
+    props: {
+      categoryData: data.data,
+    },
+  };
+}
 export default CatalogSlug;

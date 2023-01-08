@@ -16,11 +16,11 @@ const redirect = () => {
     handlerPaymenttoStr,
     payment,
   } = useContext(Context);
-  console.log("Keranjang", cart);
-  console.log("dataPembeli", data);
-  console.log("totalPrice", getTotalPrice);
+  // console.log("Keranjang", cart);
+  // console.log("dataPembeli", data);
+  // console.log("totalPrice", getTotalPrice);
 
-  console.log(encodeURI("Alamat ; data"));
+  // console.log(encodeURI("Alamat ; data"));
   const TotalHarga = getTotalPrice();
   return (
     <>
@@ -37,12 +37,12 @@ const redirect = () => {
           </div>
           <h3>Dialihkan Ke WhatsApp</h3>
           <h3>Pak Thani</h3>
-          <h4>+62XXXXXXXXX</h4>
+          <h4>+62 822-7220-7548</h4>
           <div
             className={styles.btnRight}
             onClick={() => {
               route.push(
-                `https://api.whatsapp.com/send/?phone=6285774893650&text=Selamat%20Datang,%20${encodeURI(
+                `https://api.whatsapp.com/send/?phone=6282272207548&text=Selamat%20Datang,%20${encodeURI(
                   data.name
                 )}%20di%20Pakthani,%20silahkan%20klik%20tombol%20kirim%20pada%20whatsapp%20anda%20agar%20dikonfirmasi%20admin.
                 %0A%0ABerikut+Pesanan+Anda%3A${cart.map((item, index) => {
