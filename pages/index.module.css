@@ -1,0 +1,14 @@
+.customSectionWrapper {
+    margin-top: 1rem;
+}
+.catalogButtonContainer{
+    width: 100%;
+    display: grid;
+    grid-auto-columns: 21%;
+    grid-column-gap: 10px;
+    grid-auto-flow: column;
+    padding: 25px 8px;
+    list-style: none;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}

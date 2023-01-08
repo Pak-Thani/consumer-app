@@ -1,23 +1,41 @@
-import { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
-import Link from 'next/link'
-import { startClock } from '../actions'
-import Examples from '../components/examples'
+import styles from "./index.module.css";
+import {
+  Carousel,
+  CategoryButton,
+  CustomSection,
+  FloatingButtonCart,
+} from "../components";
+import { getAllCategory, getAllCustomSection } from "../api";
+// import { FloatingCart } from "../components/FloatingButtonCart";
 
-const Index = () => {
-  const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(startClock())
-  }, [dispatch])
-
+const Index = ({ customSections, categorySections }) => {
   return (
-    <>
-      <Examples />
-      <Link href="/show-redux-state">
-        <a>Click to see current Redux State</a>
-      </Link>
-    </>
-  )
+    <div>
+      <Carousel />
+      <div className={styles.customSectionWrapper}>
+        <FloatingButtonCart />
+        <div className={styles.catalogButtonContainer}>
+          {categorySections.map((categorySection, key) => (
+            <CategoryButton data={categorySection} key={key} />
+          ))}
+        </div>
+        {customSections.map((customSection, key) => (
+          <CustomSection data={customSection} key={key} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export async function getServerSideProps() {
+  const allCustomSectionData = await getAllCustomSection();
+  const allCategorySectionData = await getAllCategory();
+  return {
+    props: {
+      customSections: allCustomSectionData.data.customSections,
+      categorySections: allCategorySectionData.data,
+    },
+  };
 }
 
-export default Index
+export default Index;

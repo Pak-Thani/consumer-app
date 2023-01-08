@@ -1,0 +1,60 @@
+/* CATEGORY button */
+.skeleton {
+  border-radius: 50%;
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.skeletonText {
+  width: 100%;
+  height: .5rem;
+  margin-bottom: .25rem;
+  border-radius: .25rem;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 70%);
+  }
+
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}
+
+.catergoryWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.logoWrapper {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img{
+  min-width: 80px;
+}
+
+.categoryName {
+  /* margin-top: 0.5rem; */
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  /* line-height: 25px; */
+}
+.categoryNameCatalog {
+  margin-top: 0.5rem;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+}

@@ -1,0 +1,88 @@
+{
+    "result": {
+    "data": {
+      "customSection": [
+        {
+          "title": "Protein Sehat",
+          "slugs": "protein-sehat-124",
+          "products": [
+              {
+                "displayName": "Ayam",
+                "slug": "ayam-135",
+                "pricePerQty": 45000,
+                "qty": "1kg",
+                "imageId": "https://picsum.photos/200",
+                "isStockAvailable": true
+              },
+              {
+                "displayName": "Ikan",
+                "slug": "Ikan-135",
+                "pricePerQty": 35000,
+                "qty": "1kg",
+                "imageId": "https://picsum.photos/200",
+                "isStockAvailable": true
+              },
+              {
+                "displayName": "Kalkun",
+                "slug": "kalkun-2341",
+                "pricePerQty": 65000,
+                "qty": "1kg",
+                "imageId": "https://picsum.photos/200",
+                "isStockAvailable": true
+              },
+              {
+                "displayName": "Ayam Petarung",
+                "slug": "ayam-petarung-1235",
+                "pricePerQty": 51000,
+                "qty": "1 ekor",
+                "imageId": "https://picsum.photos/200",
+                "isStockAvailable": false
+              }
+            ]
+        },
+        {
+          "title": "Sarapan Harianmu",
+          "slugs": "sarapan-harianmu-124",
+          "products": [
+              {
+                "displayName": "KoKo Crunch",
+                "slug": "koko-crunch-135",
+                "pricePerQty": 34000,
+                "qty": "1 pc",
+                "imageId": "https://picsum.photos/200",
+                "isStockAvailable": true
+              },
+              {
+                "displayName": "Susu Greenfield Full Cream",
+                "slug": "susu-green-field-full-cream-1254",
+                "pricePerQty": 18000,
+                "qty": "1 pc",
+                "imageId": "https://picsum.photos/200",
+                "isStockAvailable": true
+              },
+              {
+                "displayName": "Susu Greenfield UHT",
+                "slug": "susu-greenfield-uht-135",
+                "pricePerQty": 19000,
+                "qty": "1 pc",
+                "imageId": "https://picsum.photos/200",
+                "isStockAvailable": true
+              },
+              {
+                "displayName": "Honney Comb Sereal",
+                "slug": "honney-comb-sereal-135",
+                "pricePerQty": 32000,
+                "qty": "1 pc",
+                "imageId": "https://picsum.photos/200",
+                "isStockAvailable": true
+              }
+            ]
+        }
+      ],
+      "total_element": 2,
+      "total_page": 1
+    },
+    "error": null,
+    "success": true
+  }
+}

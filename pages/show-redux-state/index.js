@@ -1,20 +1,13 @@
 import { useSelector } from 'react-redux'
 import Link from 'next/link'
-
-const codeStyle = {
-  background: '#ebebeb',
-  width: 400,
-  padding: 10,
-  border: '1px solid grey',
-  marginBottom: 10,
-}
+import styles from './index.module.css'
 
 const ShowReduxState = () => {
   const state = useSelector((state) => state)
 
   return (
     <>
-      <pre style={codeStyle}>
+      <pre className={styles.codeStyle}>
         <code>{JSON.stringify(state, null, 4)}</code>
       </pre>
       <Link href="/">

@@ -1,0 +1,17 @@
+{
+    "result": {
+    "data": {
+          "products": {
+            "displayName": "Ayam",
+            "detailProduct": "Ayam potong negri asli dari kampung ajun",
+            "slug": "ayam-135",
+            "pricePerQty": 45000,
+            "qty": "1kg",
+            "imageId": "dsadAjdanFaafLAFbjhbnnlz=?en",
+            "stockAvailable": 31
+          }
+    },
+    "error": null,
+    "success": true
+  }
+}
