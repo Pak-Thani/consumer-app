@@ -9,11 +9,18 @@ import { Context } from "../../context/AppContext";
 
 const Navbar = () => {
   const route = useRouter();
-  const { search, setSearch, handleSearch, handleSubmitSearch } =
-    useContext(Context);
+  const {
+    search,
+    setSearch,
+    handleSearch,
+    handleSubmitSearch,
+    openMenu,
+    isOpen,
+    setIsOpen,
+  } = useContext(Context);
   // console.log(search);
-  const [isOpen, setIsOpen] = useState(false);
-  const openMenu = () => setIsOpen(!isOpen);
+  // const [isOpen, setIsOpen] = useState(false);
+  // const openMenu = () => setIsOpen(!isOpen);
   return (
     <div className="top">
       <div className={styles.logoWrapper}>

@@ -4,14 +4,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import style from "../public/style/global.module.css";
 import { Navbar } from "../components";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 // import { ShoppingCartProvider } from '../context/ShoppingCartContext'
-import { ContextProvider } from "../context/AppContext";
+import { Context, ContextProvider } from "../context/AppContext";
 
 export default function App({ Component, pageProps }) {
   const store = useStore(pageProps.initialReduxState);
   const [isNavbar, setIsNavbar] = useState(true);
   const { route } = useRouter();
+  // const { openMenu } = useContext(Context);
 
   // disable navbar for soume route
   useEffect(() => {
