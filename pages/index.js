@@ -6,9 +6,13 @@ import {
   FloatingButtonCart,
 } from "../components";
 import { getAllCategory, getAllCustomSection } from "../api";
+import { Context } from "../context/AppContext";
+import { useContext } from "react";
 // import { FloatingCart } from "../components/FloatingButtonCart";
 
 const Index = ({ customSections, categorySections }) => {
+  const { openMenu, isOpen } = useContext(Context);
+  // console.log(isOpen);
   return (
     <div>
       <Carousel />

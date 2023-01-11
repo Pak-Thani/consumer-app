@@ -216,6 +216,8 @@ function ContextProvider({ children }) {
   const getTotalItem = () => {
     return cart.reduce((sum, { quantity }) => sum + quantity, 0);
   };
+  const [isOpen, setIsOpen] = useState(false);
+  const openMenu = () => setIsOpen(!isOpen);
   return (
     <Context.Provider
       value={{
@@ -240,7 +242,10 @@ function ContextProvider({ children }) {
         handlePayment,
         handlerPaymenttoStr,
         handleSearch,
-        // handleSubmitSearch,
+        isOpen,
+        setIsOpen,
+        openMenu,
+        handleSubmitSearch,
       }}
     >
       {children}
