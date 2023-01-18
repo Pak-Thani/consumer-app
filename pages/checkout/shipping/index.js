@@ -41,7 +41,11 @@ const Index = ({}) => {
             <label className={styles.radioForm} for="time_1">
               <div className={styles.formText}>
                 <div className={styles.imageContainer}>
-                  <Image src={deliveryLogo} layout="fill" objectFit="cover" />
+                  <Image
+                    src="https://pakthani.s3.ap-southeast-1.amazonaws.com/media/upload/deliveryLogo.png"
+                    layout="fill"
+                    objectFit="cover"
+                  />
                 </div>
                 <h3>10.30 - 11.30</h3>
               </div>
@@ -57,7 +61,11 @@ const Index = ({}) => {
             <label className={styles.radioForm} for="time_2">
               <div className={styles.formText}>
                 <div className={styles.imageContainer}>
-                  <Image src={deliveryLogo} layout="fill" objectFit="cover" />
+                  <Image
+                    src="https://pakthani.s3.ap-southeast-1.amazonaws.com/media/upload/deliveryLogo.png"
+                    layout="fill"
+                    objectFit="cover"
+                  />
                 </div>
                 <h3>12.00 - 13.00</h3>
               </div>
@@ -73,7 +81,11 @@ const Index = ({}) => {
             <label className={styles.radioForm} for="time_3">
               <div className={styles.formText}>
                 <div className={styles.imageContainer}>
-                  <Image src={deliveryLogo} layout="fill" objectFit="cover" />
+                  <Image
+                    src="https://pakthani.s3.ap-southeast-1.amazonaws.com/media/upload/deliveryLogo.png"
+                    layout="fill"
+                    objectFit="cover"
+                  />
                 </div>
                 <h3>15.30 - 16.30</h3>
               </div>
