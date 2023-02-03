@@ -36,8 +36,8 @@ export async function getServerSideProps() {
   const allCategorySectionData = await getAllCategory();
   return {
     props: {
-      customSections: allCustomSectionData.data.customSections,
-      categorySections: allCategorySectionData.data,
+      customSections: allCustomSectionData.data || [],
+      categorySections: allCategorySectionData.data || [],
     },
   };
 }
