@@ -7,6 +7,10 @@ export async function getAllCustomSection() {
   // https://pakthani-644xh.ondigitalocean.app/api/custom-sections/
   return fetchGet(`${CONSUMER_API_BASE_URL}/api/custom-sections/`);
 }
+export async function getAllBanner() {
+  // https://pakthani-644xh.ondigitalocean.app/api/banner/
+  return fetchGet(`${CONSUMER_API_BASE_URL}/api/banner/`);
+}
 export async function getAllCategory() {
   // https://pakthani-644xh.ondigitalocean.app/api/category/
   return fetchGet(`${CONSUMER_API_BASE_URL}/api/category/`);
