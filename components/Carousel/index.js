@@ -82,7 +82,7 @@ export default function Carousel({ data }) {
                 />
               </div>
             </SwiperSlide>
-            <SwiperSlide>
+            {/* <SwiperSlide>
               <div className={styles.carouselImageWrapper}>
                 <Image
                   src="/../public/4.jpg"
@@ -137,7 +137,7 @@ export default function Carousel({ data }) {
                   className={styles.skeleton}
                 />
               </div>
-            </SwiperSlide>
+            </SwiperSlide> */}
           </Swiper>
         </div>
       </div>
