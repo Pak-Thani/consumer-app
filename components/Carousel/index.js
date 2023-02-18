@@ -3,25 +3,25 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import ArrowBack from "../../public/images/arrow-back.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, EffectFade } from 'swiper';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import { Navigation, EffectFade } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import { useRef } from "react";
 
-
-export default function Carousel() {
+export default function Carousel({ data }) {
   const [carouselImageListIndex, setCarouselImageListIndex] = useState(0);
-  const carouselImageList = ["/3.jpg", "/6.jpg", "/2.jpg", "/5.jpg", "/1.jpg"];
+  // const carouselImageList = ["/3.jpg", "/6.jpg", "/2.jpg", "/5.jpg", "/1.jpg"];
   const delay = 5000;
-  const navigationPrevRef = useRef(null)
-  const navigationNextRef = useRef(null)
-
+  const navigationPrevRef = useRef(null);
+  const navigationNextRef = useRef(null);
+  const [imgLink, setImgLink] = useState(data.map((data) => data.link));
+  // console.log("ini gambar", costDescriptions);
   useEffect(() => {
     setTimeout(
       () =>
-      setCarouselImageListIndex((prevIndex) =>
-          prevIndex === carouselImageList.length - 1 ? 0 : prevIndex + 1
+        setCarouselImageListIndex((prevIndex) =>
+          prevIndex === imgLink.length - 1 ? 0 : prevIndex + 1
         ),
       delay
     );
@@ -37,20 +37,28 @@ export default function Carousel() {
   //   }
   // };
 
-  // const handleOnClickNextCarousel = () => {
-  //   if (carouselImageListIndex === carouselImageList.length - 1) {
-  //     setCarouselImageListIndex(0);
+  // const handleSwipe = () => {
+  //   if (startX > endX) {
+  //     setCurrentIndex(currentIndex === slides.length - 1 ? 0 : currentIndex + 1);
   //   } else {
-  //     setCarouselImageListIndex(carouselImageListIndex + 1);
+  //     setCurrentIndex(currentIndex === 0 ? slides.length - 1 : currentIndex - 1);
   //   }
   // };
+
+  // useEffect(() => {
+  //   sliderRef.current.addEventListener('touchstart', handleTouchStart);
+  //   sliderRef.current.addEventListener('touchend', handleTouchEnd);
+
+  //   return () => {
+  //     sliderRef.current.removeEventListener('touchstart', handleTouchStart);
+  //     sliderRef.current.removeEventListener('touchend', handleTouchEnd);
+  //   };
+  // }, []);
 
   return (
     <div className={styles.main}>
       <div className={styles.container}>
         <div className={styles.carouselImageWrapper}>
-          <div className={styles.arrowPrev} ref={navigationPrevRef}></div>
-          <div className={styles.arrowNext} ref={navigationNextRef}></div>
           <Swiper
             modules={[Navigation, EffectFade]}
             navigation={{
@@ -60,21 +68,76 @@ export default function Carousel() {
             speed={800}
             loop
             className={styles.mySwiper}
-          > 
-            <SwiperSlide >
+          >
+            <SwiperSlide>
               <div className={styles.carouselImageWrapper}>
                 <Image
-                  src={`${carouselImageList[carouselImageListIndex]}`}
+                  src={`${imgLink[carouselImageListIndex]}`}
                   layout="fill"
                   objectFit="cover"
                   speed={800}
                   loop
+                  spaceBetween={30}
                   className={styles.skeleton}
                 />
               </div>
             </SwiperSlide>
-            <div ref={navigationPrevRef} />
-            <div ref={navigationNextRef} />
+            {/* <SwiperSlide>
+              <div className={styles.carouselImageWrapper}>
+                <Image
+                  src="/../public/4.jpg"
+                  alt=""
+                  layout="fill"
+                  objectFit="cover"
+                  speed={800}
+                  loop
+                  spaceBetween={30}
+                  className={styles.skeleton}
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.carouselImageWrapper}>
+                <Image
+                  src="/../public/5.jpg"
+                  alt=""
+                  layout="fill"
+                  objectFit="cover"
+                  speed={800}
+                  loop
+                  spaceBetween={30}
+                  className={styles.skeleton}
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.carouselImageWrapper}>
+                <Image
+                  src="/../public/6.jpg"
+                  alt=""
+                  layout="fill"
+                  objectFit="cover"
+                  speed={800}
+                  loop
+                  spaceBetween={30}
+                  className={styles.skeleton}
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.carouselImageWrapper}>
+                <Image
+                  src="/../public/1.jpg"
+                  alt=""
+                  layout="fill"
+                  objectFit="cover"
+                  speed={800}
+                  loop
+                  spaceBetween={30}
+                  className={styles.skeleton}
+                />
+              </div>
+            </SwiperSlide> */}
           </Swiper>
         </div>
       </div>
