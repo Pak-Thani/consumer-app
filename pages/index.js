@@ -5,17 +5,17 @@ import {
   CustomSection,
   FloatingButtonCart,
 } from "../components";
-import { getAllCategory, getAllCustomSection } from "../api";
+import { getAllBanner, getAllCategory, getAllCustomSection } from "../api";
 import { Context } from "../context/AppContext";
 import { useContext } from "react";
 // import { FloatingCart } from "../components/FloatingButtonCart";
 
-const Index = ({ customSections, categorySections }) => {
+const Index = ({ customSections, categorySections, carouselImg }) => {
   const { openMenu, isOpen } = useContext(Context);
   // console.log(isOpen);
   return (
     <div>
-      <Carousel />
+      <Carousel data={carouselImg} />
       <div className={styles.customSectionWrapper}>
         <FloatingButtonCart />
         <div className={styles.catalogButtonContainer}>
@@ -34,10 +34,12 @@ const Index = ({ customSections, categorySections }) => {
 export async function getServerSideProps() {
   const allCustomSectionData = await getAllCustomSection();
   const allCategorySectionData = await getAllCategory();
+  const allCarouselImg = await getAllBanner();
   return {
     props: {
       customSections: allCustomSectionData.data || [],
       categorySections: allCategorySectionData.data || [],
+      carouselImg: allCarouselImg.data,
     },
   };
 }
