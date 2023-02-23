@@ -13,7 +13,7 @@ import { getAllBanner } from "../../api";
 
 
 export default function Carousel({ data }) {
-  const delay = 1000;
+  const delay = 2000;
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
   const route = useRouter();
@@ -58,7 +58,7 @@ export default function Carousel({ data }) {
     }
   }, [bannerSlug]);
   
-
+  
 
   // console.log(categorySlug);
   // console.log(categoryData);
