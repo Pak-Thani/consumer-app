@@ -3,18 +3,16 @@
   position: relative;
 }
 
-/* .button {
+.transparentButton {
   cursor: pointer;
-  position: absolute;
-  color: white;
-  user-select: none;
-  text-decoration: none;
-  align-items: center;
-  transition: 0.6s ease;
-  z-index: 1;
-  opacity: .6;
-  top: 40px;
-} */
+  border: none;
+  background-color: transparent;
+  height: 50px;
+  /* width: 200px; */
+  color: #3498db;
+  font-size: 1.5em;
+  /* box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6); */
+}
 
 
 .prev {
