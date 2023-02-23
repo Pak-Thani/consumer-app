@@ -39,19 +39,23 @@ export default function Carousel({ data }) {
 
   // const handleSwipe = () => {
   //   if (startX > endX) {
-  //     setCurrentIndex(currentIndex === slides.length - 1 ? 0 : currentIndex + 1);
+  //     setCurrentIndex(
+  //       currentIndex === slides.length - 1 ? 0 : currentIndex + 1
+  //     );
   //   } else {
-  //     setCurrentIndex(currentIndex === 0 ? slides.length - 1 : currentIndex - 1);
+  //     setCurrentIndex(
+  //       currentIndex === 0 ? slides.length - 1 : currentIndex - 1
+  //     );
   //   }
   // };
 
   // useEffect(() => {
-  //   sliderRef.current.addEventListener('touchstart', handleTouchStart);
-  //   sliderRef.current.addEventListener('touchend', handleTouchEnd);
+  //   sliderRef.current.addEventListener("touchstart", handleTouchStart);
+  //   sliderRef.current.addEventListener("touchend", handleTouchEnd);
 
   //   return () => {
-  //     sliderRef.current.removeEventListener('touchstart', handleTouchStart);
-  //     sliderRef.current.removeEventListener('touchend', handleTouchEnd);
+  //     sliderRef.current.removeEventListener("touchstart", handleTouchStart);
+  //     sliderRef.current.removeEventListener("touchend", handleTouchEnd);
   //   };
   // }, []);
 
@@ -69,7 +73,25 @@ export default function Carousel({ data }) {
             loop
             className={styles.mySwiper}
           >
-            <SwiperSlide>
+            {data.map((i) => {
+              console.log("data", i.link);
+              return (
+                <SwiperSlide>
+                  <div className={styles.carouselImageWrapper}>
+                    <Image
+                      src={`${i.link}`}
+                      layout="fill"
+                      objectFit="cover"
+                      speed={800}
+                      loop
+                      spaceBetween={30}
+                      className={styles.skeleton}
+                    />
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+            {/* <SwiperSlide>
               <div className={styles.carouselImageWrapper}>
                 <Image
                   src={`${imgLink[carouselImageListIndex]}`}
@@ -81,7 +103,7 @@ export default function Carousel({ data }) {
                   className={styles.skeleton}
                 />
               </div>
-            </SwiperSlide>
+            </SwiperSlide> */}
             {/* <SwiperSlide>
               <div className={styles.carouselImageWrapper}>
                 <Image
