@@ -39,22 +39,18 @@
   align-items: center;
 }
 .img{
-  min-width: 80px;
+  min-width: 50px;
 }
 
 .categoryName {
-  /* margin-top: 0.5rem; */
-  font-family: 'Nunito';
   font-style: normal;
   font-weight: 500;
   font-size: 10px;
-  /* line-height: 25px; */
 }
 .categoryNameCatalog {
   margin-top: 0.5rem;
-  font-family: 'Nunito';
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 0.85rem;
   line-height: 25px;
 }

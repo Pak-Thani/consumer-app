@@ -14,7 +14,6 @@
 }
 
 .headerTitle {
-  font-family: 'Nunito';
   font-style: normal;
   font-weight: 800;
   font-size: 22px;
@@ -39,7 +38,6 @@
 
 .cartFooterTitle {
   margin-bottom: 0;
-  font-family: 'Nunito';
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -49,7 +47,6 @@
 .totalPrice {
   margin-bottom: 0;
   margin-top: 0.4rem;
-  font-family: 'Nunito';
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -74,7 +71,6 @@
 }
 
 .emptyCardTitle {
-  font-family: 'Nunito';
   font-style: normal;
   font-weight: 500;
   font-size: 18px;

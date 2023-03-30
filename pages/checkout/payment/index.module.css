@@ -26,7 +26,6 @@
 }
 
 .headerTitle {
-    font-family: 'Nunito';
     font-style: normal;
     font-weight: 800;
     font-size: 22px;
@@ -53,7 +52,6 @@
 
 .priceContainer .string {
     margin-bottom: 0;
-    font-family: 'Nunito';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -62,7 +60,6 @@
 
 .priceContainer .price {
     margin-bottom: 0;
-    font-family: 'Nunito';
     font-style: normal;
     font-weight: 800;
     font-size: 12px;
@@ -84,7 +81,6 @@
     margin-top: 1rem;
     margin-bottom: 0;
     color: black;
-    font-family: 'Nunito';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -95,7 +91,6 @@
     color: black;
     margin-top: 1rem;
     margin-bottom: 0;
-    font-family: 'Nunito';
     font-style: normal;
     font-weight: 800;
     font-size: 16px;
@@ -105,7 +100,6 @@
 /* FORM */
 .formTitle {
     padding: 0.5rem 0 0 0;
-    font-family: 'Nunito';
     font-style: normal;
     font-weight: 800;
     font-size: 22px;
@@ -157,7 +151,6 @@
 
 .formText h3 {
     padding-left: 0.5rem;
-    font-family: 'Nunito';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -198,7 +191,6 @@
 }
 
 .btnLeft {
-    font-family: 'Nunito';
     font-style: normal;
     font-weight: 700;
     font-size: 12px;
@@ -223,7 +215,6 @@
 }
 
 .btnRight {
-    font-family: 'Nunito';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -242,7 +233,6 @@
 }
 
 .emptyCardTitle {
-    font-family: 'Nunito';
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
