@@ -25,31 +25,31 @@ const CategoryButton = ({ data }) => {
               {router.pathname === "/catalog" ? (
                 <div
                   style={{
-                    width: "87px",
-                    height: "87px",
+                    width: "50px",
+                    height: "50px",
                     position: "relative",
                   }}
                 >
                   <Image
                     src={data.image}
                     className={styles.img}
-                    width={87}
-                    height={87}
+                    width={50}
+                    height={50}
                   />
                 </div>
               ) : (
                 <div
                   style={{
-                    width: "60px",
-                    height: "60px",
+                    width: "50px",
+                    height: "50px",
                     position: "relative",
                   }}
                 >
                   <Image
                     src={data.image}
                     className={styles.img}
-                    width={87}
-                    height={87}
+                    width={50}
+                    height={50}
                   />
                 </div>
               )}

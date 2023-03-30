@@ -7,9 +7,6 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    /* height: ; */
-    /* background: red; */
-    /* padding-bottom: 1rem; */
     border-bottom: solid 4px #E7E7E7;
 }
 
@@ -32,7 +29,6 @@
 
 .productName {
     margin-bottom: 0;
-    font-family: 'Nunito';
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -40,7 +36,6 @@
 }
 
 .productQty {
-    font-family: 'Nunito';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -49,7 +44,6 @@
 }
 
 .productPrice {
-    font-family: 'Nunito';
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
